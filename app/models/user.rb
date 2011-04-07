@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
     session[:user_id]=nil
     cookies.delete(:authorization_token)
   end
+  
   def clear_password!
     self.password=nil
   end

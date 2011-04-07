@@ -23,9 +23,11 @@ class UserController < ApplicationController
   
   def login
     @title="Login to RailsSpace"
+    #如果是通过限制访问的页面转向到登录界面则验证cookies.
     if request.get?
       @user=User.new(:remember_me=>cookies[:remember_me]||"0")
-    else param_posted?(:user)
+    #如果是通过提交表单则执行下边程序.
+    elsif param_posted?(:user)
     	@user=User.new(params[:user])
     	user=User.find_by_screen_name_and_password(@user.screen_name,@user.password)
     	if user
@@ -59,7 +61,7 @@ class UserController < ApplicationController
   def protect
     unless logged_in?
       #友好的转向页面
-      session[:protected_page]=request.request_uri
+      session[:protected_page]=request.fullpath
       flash[:notice]="Please log in first"
       redirect_to :action=>"login"
       #return false是打断往下大链,即before_filter往下执行大内容

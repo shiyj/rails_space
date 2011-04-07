@@ -65,7 +65,7 @@ class UserControllerTest < ActionController::TestCase
   end
   
   test "logout" do
-    try_to_login @valid_user
+    try_to_login @valid_user,:remember_me=>"0"
     assert_not_nil logged_in?
     get :logout
     assert_response :redirect
@@ -77,7 +77,7 @@ class UserControllerTest < ActionController::TestCase
   test "login failed whith nonexisten screen_name" do
     invalid_user=@valid_user
     invalid_user.screen_name="no such user"
-    try_to_login invalid_user
+    try_to_login invalid_user ,:remember_me=>"0"
     assert_template "login"
     assert_equal "Invalid screen name/password combination",flash[:notice]
     user=assigns(:user)
@@ -97,7 +97,7 @@ class UserControllerTest < ActionController::TestCase
     get:index
     assert_response :redirect
     assert_redirected_to :action=>"login"
-    try_to_login @valid_user
+    try_to_login @valid_user,:remember_me=>"0"
     assert_response :redirect
     assert_redirected_to :action=>"index"
     assert_nil session[:protected_page]
@@ -116,20 +116,49 @@ class UserControllerTest < ActionController::TestCase
   end
   
   test "login_success" do
-    try_to_login @valid_user
+    try_to_login @valid_user,:remember_me=>"0"
     assert_not_nil logged_in?
     assert_equal @valid_user.id,session[:user_id]
     assert_equal "User #{@valid_user.screen_name} logged in!",flash[:notice]
+    assert_response :redirect
     assert_redirected_to :action=>"index"
+    #没有选中remember_me的情况
+    user=assigns(:user)
+    assert user.remember_me!="1"
+    #没有cookie集
+    assert_nil cookies[:remember_me]
+    assert_nil cookies[:authorization_token]
+  end
+  
+  test "login success with remember me" do
+    try_to_login @valid_user,:remember_me=>"1"
+    test_time=Time.now
+    assert logged_in?
+    assert_equal @valid_user.id,session[:user_id]
+    assert_equal "User #{@valid_user.screen_name} logged in!",flash[:notice]
+    assert_response :redirect
+    assert_redirected_to :action=>"index"
+    #检查cookies和过期时间
+    user=User.find(@valid_user.id)
+    #remember_me cookies
+    assert_equal "1",cookies["remember_me"]
+    #assert_equal 10.years.from_now(test_time),cookies["remember_me"].expires
+    #身份验证cookie
+    cookie_token = cookies[:authorization_token]
+    assert_equal user.authorization_token,cookies["authorization_token"]
+    #assert_equal 10.years.from_now(test_time),cookie_expires(:authorization_token)
   end
   ###########################################
   #以下为函数定义部分
   ###########################################
   
   private
-  def try_to_login(user)
-    post:login,:user=>{:screen_name=>user.screen_name,
+  def try_to_login(user,options={})
+    user_hash={:screen_name=>user.screen_name,
                        :password=>user.password }
+    user_hash.merge!(options)
+    post:login,:user=>user_hash
+    
   end
   
   #authorize只是在session中标记以方便测试
@@ -137,6 +166,6 @@ class UserControllerTest < ActionController::TestCase
   #故而在单项测试中不能太多耦合
   def authorize(user)
     @request.session[:user_id]=user.id
-  end  
+  end
   
 end
