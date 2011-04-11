@@ -4613,3 +4613,348 @@ Completed 302 Found in 32ms
 
 
 Started GET "/sit/index" for 127.0.0.1 at Thu Apr 07 08:58:53 +0800 2011
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'aa/noyes') AND ("users".id <> 2) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'aa@bbb,com') AND ("users".id <> 2) LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') AND ("users".id <> 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') AND ("users".id <> 1) LIMIT 1[0m
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 1.9ms)
+  Processing by SiteController#help as HTML
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+  Processing by SiteController#index as HTML
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+  Processing by SiteController#index as HTML
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#index as HTML
+Redirected to http://test.host/user/login
+Completed 302 Found in 2ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"no such user"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'no such user' LIMIT 1
+Completed 200 OK in 41ms (Views: 23.6ms | ActiveRecord: 1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#index as HTML
+Redirected to http://test.host/user/login
+Completed 302 Found in 1ms
+  Processing by UserController#login as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+Redirected to http://test.host/user/index
+Completed 302 Found in 3ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+Redirected to http://test.host/user/index
+Completed 302 Found in 3ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+Completed   in 5ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+Redirected to http://test.host/user/index
+Completed 302 Found in 3ms
+  Processing by UserController#logout as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+Redirected to http://test.host/site/index
+Completed 302 Found in 1ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#index as HTML
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 3.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#index as HTML
+Redirected to http://test.host/user/login
+Completed 302 Found in 1ms
+  Processing by UserController#register as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'new_screen_name') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'valid@aaa.com') LIMIT 1
+  [1m[36mAREL (0.9ms)[0m  [1mINSERT INTO "users" ("updated_at", "created_at", "password", "screen_name", "authorization_token", "email") VALUES ('2011-04-07 01:31:29.803163', '2011-04-07 01:31:29.803163', 'tttttttttttttttttttt', 'new_screen_name', NULL, 'valid@aaa.com')[0m
+Redirected to http://test.host/user/index
+Completed 302 Found in 11ms
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#register as HTML
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "screen_name"=>"new_screen_name", "email"=>"valid@aaa.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'new_screen_name') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'valid@aaa.com') LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "users" ("updated_at", "created_at", "password", "screen_name", "authorization_token", "email") VALUES ('2011-04-07 01:31:29.819016', '2011-04-07 01:31:29.819016', 'long_enough_password', 'new_screen_name', NULL, 'valid@aaa.com')[0m
+Redirected to http://test.host/user/index
+Completed 302 Found in 7ms
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'long_enough_password' AND "users"."screen_name" = 'new_screen_name' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#index as HTML
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 3.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#register as HTML
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+
+
+Started POST "/user/login" for 127.0.0.1 at Thu Apr 07 09:31:32 +0800 2011
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1[0m
+Completed   in 23ms
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'aa/noyes') AND ("users".id <> 2) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'aa@bbb,com') AND ("users".id <> 2) LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') AND ("users".id <> 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') AND ("users".id <> 1) LIMIT 1[0m
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 1.8ms)
+  Processing by SiteController#help as HTML
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+  Processing by SiteController#index as HTML
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+  Processing by SiteController#index as HTML
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#index as HTML
+Redirected to http://test.host/user/login
+Completed 302 Found in 2ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"no such user"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'no such user' LIMIT 1
+Completed 200 OK in 41ms (Views: 23.6ms | ActiveRecord: 1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#index as HTML
+Redirected to http://test.host/user/login
+Completed 302 Found in 1ms
+  Processing by UserController#login as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+Redirected to http://test.host/user/index
+Completed 302 Found in 2ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+Redirected to http://test.host/user/index
+Completed 302 Found in 3ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') AND ("users".id <> 1) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') AND ("users".id <> 1) LIMIT 1
+  [1m[36mAREL (0.8ms)[0m  [1mUPDATE "users" SET "authorization_token" = 'edcfb54dfd666f6657d10db2d658fb1b5e9a1c4d', "updated_at" = '2011-04-07 01:33:24.764234' WHERE "users"."id" = 1[0m
+Completed   in 17ms
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1[0m
+Redirected to http://test.host/user/index
+Completed 302 Found in 3ms
+  Processing by UserController#logout as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+Redirected to http://test.host/site/index
+Completed 302 Found in 1ms
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#index as HTML
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 4.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#index as HTML
+Redirected to http://test.host/user/login
+Completed 302 Found in 1ms
+  Processing by UserController#register as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'new_screen_name') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'valid@aaa.com') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "users" ("authorization_token", "password", "screen_name", "email", "updated_at", "created_at") VALUES (NULL, 'tttttttttttttttttttt', 'new_screen_name', 'valid@aaa.com', '2011-04-07 01:33:24.825027', '2011-04-07 01:33:24.825027')
+Redirected to http://test.host/user/index
+Completed 302 Found in 7ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#register as HTML
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "screen_name"=>"new_screen_name", "email"=>"valid@aaa.com"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'new_screen_name') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'valid@aaa.com') LIMIT 1[0m
+  [1m[35mAREL (0.9ms)[0m  INSERT INTO "users" ("authorization_token", "password", "screen_name", "email", "updated_at", "created_at") VALUES (NULL, 'long_enough_password', 'new_screen_name', 'valid@aaa.com', '2011-04-07 01:33:24.840875', '2011-04-07 01:33:24.840875')
+Redirected to http://test.host/user/index
+Completed 302 Found in 7ms
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."password" = 'long_enough_password' AND "users"."screen_name" = 'new_screen_name' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#index as HTML
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 4.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#register as HTML
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+
+
+Started POST "/user/login" for 127.0.0.1 at Thu Apr 07 09:33:27 +0800 2011
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') AND ("users".id <> 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') AND ("users".id <> 1) LIMIT 1[0m
+  [1m[35mAREL (0.8ms)[0m  UPDATE "users" SET "authorization_token" = 'edcfb54dfd666f6657d10db2d658fb1b5e9a1c4d', "updated_at" = '2011-04-07 01:33:27.928271' WHERE "users"."id" = 1
+Completed   in 31ms
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'aa/noyes') AND ("users".id <> 2) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'aa@bbb,com') AND ("users".id <> 2) LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') AND ("users".id <> 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') AND ("users".id <> 1) LIMIT 1[0m
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 1.8ms)
+  Processing by SiteController#help as HTML
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+  Processing by SiteController#index as HTML
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+  Processing by SiteController#index as HTML
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#index as HTML
+Redirected to http://test.host/user/login
+Completed 302 Found in 2ms
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"no such user"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'no such user' LIMIT 1
+Completed 200 OK in 41ms (Views: 23.4ms | ActiveRecord: 1.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#index as HTML
+Redirected to http://test.host/user/login
+Completed 302 Found in 1ms
+  Processing by UserController#login as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+Redirected to http://test.host/user/index
+Completed 302 Found in 2ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+Redirected to http://test.host/user/index
+Completed 302 Found in 3ms
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') AND ("users".id <> 1) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') AND ("users".id <> 1) LIMIT 1
+  [1m[36mAREL (0.8ms)[0m  [1mUPDATE "users" SET "updated_at" = '2011-04-07 01:34:41.916756', "authorization_token" = 'edcfb54dfd666f6657d10db2d658fb1b5e9a1c4d' WHERE "users"."id" = 1[0m
+Redirected to http://test.host/user/index
+Completed 302 Found in 18ms
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1
+Redirected to http://test.host/user/index
+Completed 302 Found in 3ms
+  Processing by UserController#logout as HTML
+  Parameters: {"user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+Redirected to http://test.host/site/index
+Completed 302 Found in 1ms
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#index as HTML
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 4.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#index as HTML
+Redirected to http://test.host/user/login
+Completed 302 Found in 1ms
+  Processing by UserController#register as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'new_screen_name') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'valid@aaa.com') LIMIT 1
+  [1m[36mAREL (0.9ms)[0m  [1mINSERT INTO "users" ("password", "updated_at", "screen_name", "authorization_token", "created_at", "email") VALUES ('tttttttttttttttttttt', '2011-04-07 01:34:41.980260', 'new_screen_name', NULL, '2011-04-07 01:34:41.980260', 'valid@aaa.com')[0m
+Redirected to http://test.host/user/index
+Completed 302 Found in 7ms
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#register as HTML
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "screen_name"=>"new_screen_name", "email"=>"valid@aaa.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'new_screen_name') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'valid@aaa.com') LIMIT 1
+  [1m[36mAREL (0.9ms)[0m  [1mINSERT INTO "users" ("password", "updated_at", "screen_name", "authorization_token", "created_at", "email") VALUES ('long_enough_password', '2011-04-07 01:34:41.995827', 'new_screen_name', NULL, '2011-04-07 01:34:41.995827', 'valid@aaa.com')[0m
+Redirected to http://test.host/user/index
+Completed 302 Found in 7ms
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'long_enough_password' AND "users"."screen_name" = 'new_screen_name' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Processing by UserController#index as HTML
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 3.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Processing by UserController#register as HTML
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+
+
+Started POST "/user/login" for 127.0.0.1 at Thu Apr 07 09:34:45 +0800 2011
+  Processing by UserController#login as HTML
+  Parameters: {"user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "screen_name"=>"millikan"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaaaaaaaa' AND "users"."screen_name" = 'millikan' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."screen_name" = 'millikan') AND ("users".id <> 1) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'ram@exmple.com') AND ("users".id <> 1) LIMIT 1[0m
+  [1m[35mAREL (0.8ms)[0m  UPDATE "users" SET "authorization_token" = 'edcfb54dfd666f6657d10db2d658fb1b5e9a1c4d', "updated_at" = '2011-04-07 01:34:45.058204' WHERE "users"."id" = 1
+Redirected to http://www.example.com/user/index
+Completed 302 Found in 31ms
+
+
+Started GET "/sit/index" for 127.0.0.1 at Thu Apr 07 09:34:45 +0800 2011

@@ -11137,3 +11137,887 @@ Started GET "/site/help" for 127.0.0.1 at Thu Apr 07 09:08:39 +0800 2011
   Processing by SiteController#help as HTML
 Rendered site/help.html.erb within layouts/application (12.6ms)
 Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+  [1m[36mSQL (1.3ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "screen_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime, "authorization_token" varchar(255)) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110331050256')
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110312131725')[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110330154615')
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35mSQL (1.3ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "screen_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime, "authorization_token" varchar(255)) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110331050256')
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110312131725')[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110330154615')
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (1.5ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35mSQL (1.4ms)[0m  CREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("sessions")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_info('index_sessions_on_session_id')
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.4ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "screen_name" varchar(255), "email" varchar(255), "password" varchar(255), "created_at" datetime, "updated_at" datetime, "authorization_token" varchar(255)) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110331050256')
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110312131725')[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110330154615')
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 11 22:09:55 +0800 2011
+
+SyntaxError (/media/systerm/Sites/rails_space/app/controllers/site_controller.rb:14: syntax error, unexpected ':', expecting kEND
+    layout: "googlemap"
+           ^):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 11 22:13:13 +0800 2011
+
+SyntaxError (/media/systerm/Sites/rails_space/app/controllers/site_controller.rb:14: syntax error, unexpected ':', expecting kEND
+    layout: "googlemap"
+           ^):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 11 22:13:19 +0800 2011
+
+SyntaxError (/media/systerm/Sites/rails_space/app/controllers/site_controller.rb:14: syntax error, unexpected ':', expecting kEND
+    layout: "googlemap"
+           ^):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 11 22:13:43 +0800 2011
+
+SyntaxError (/media/systerm/Sites/rails_space/app/controllers/site_controller.rb:14: syntax error, unexpected ':', expecting kEND
+    layout: "googlemap"
+           ^):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Apr 11 22:13:55 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 22:13:58 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (68.5ms)
+Completed 200 OK in 97ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 22:13:59 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 22:14:00 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 22:19:24 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 42ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:19:26 +0800 2011
+  Processing by GoogleController#index as HTML
+Completed   in 1ms
+
+NoMethodError (You specified nil as the layout, but no such method was found):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.3ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:20:04 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.7ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:20:23 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.8ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 22:23:49 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:23:50 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.7ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:24:09 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.7ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 22:25:35 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 22:25:36 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (75.7ms)
+Completed 200 OK in 105ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:25:37 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 22:26:59 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:27:02 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 22:27:04 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 22:27:05 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 41ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:27:44 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 22:27:46 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 22:27:47 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:27:48 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 22:27:50 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 22:29:47 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 108ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:29:49 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 22:29:50 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:29:52 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:30:32 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.7ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 22:30:36 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:30:37 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.8ms)
+Completed 200 OK in 84ms (Views: 83.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 22:30:40 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 22:30:41 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 43ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 22:30:42 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 42ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:30:43 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.7ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:36:44 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.7ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 22:36:47 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:36:48 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.7ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:38:58 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.8ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 22:57:58 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:57:59 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 22:58:04 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 23:01:54 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:01:57 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:01:59 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:02:01 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 102ms (Views: 101.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:02:09 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:04:10 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:04:11 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:08:00 +0800 2011
+  Processing by SiteController#help as HTML
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:08:29 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 23:08:31 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 23:08:32 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:08:33 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:08:59 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:08:59 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:09:01 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 23:09:02 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (78.8ms)
+Completed 200 OK in 108ms (Views: 107.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:15:33 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 23:15:35 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:16:54 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:16:55 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:24:01 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 23:24:03 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Mon Apr 11 23:24:04 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:24:05 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:24:45 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:24:46 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 23:24:59 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 23:25:20 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:25:23 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:25:23 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 23:28:43 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:28:45 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:28:46 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Mon Apr 11 23:28:51 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:28:53 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 114ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 23:28:55 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Mon Apr 11 23:28:56 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Mon Apr 11 23:28:58 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 40ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:00:16 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:00:17 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Tue Apr 12 00:00:19 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:00:20 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:00:32 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:00:33 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:01:05 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:01:06 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (76.5ms)
+Completed 200 OK in 103ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Tue Apr 12 00:01:09 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:01:12 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Tue Apr 12 00:01:49 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Tue Apr 12 00:01:51 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:01:55 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:01:59 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:02:02 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:02:29 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:04:25 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (69.8ms)
+Completed 200 OK in 99ms (Views: 98.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:04:26 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:04:29 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:04:29 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Tue Apr 12 00:04:31 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:04:33 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Tue Apr 12 00:04:35 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:04:36 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 44ms (Views: 43.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:04:37 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:04:56 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:04:57 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:04:58 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (80.9ms)
+Completed 200 OK in 110ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Tue Apr 12 00:04:59 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:05:01 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:05:02 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Tue Apr 12 00:05:04 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Tue Apr 12 00:05:05 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:05:06 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:05:08 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:05:09 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 40ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:05:11 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Tue Apr 12 00:05:14 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 40ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:05:16 +0800 2011
+  Processing by GoogleController#index as HTML
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:06:29 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (1.0ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Tue Apr 12 00:06:34 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 00:06:35 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/googlemap (0.9ms)
+Completed 200 OK in 78ms (Views: 77.6ms | ActiveRecord: 0.0ms)

@@ -1,4 +1,6 @@
 RailsSpace::Application.routes.draw do
+  get "google/index"
+
   get "user/index"
 
   get "user/register"

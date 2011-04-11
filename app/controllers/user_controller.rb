@@ -33,13 +33,9 @@ class UserController < ApplicationController
     	if user
     		user.login!(session)
     		if @user.remember_me=="1"
-    		  cookies[:remember_me]={:value=>"1",:expires=>10.years.from_now}
-    		  user.authorization_token=Digest::SHA1.hexdigest("#{user.screen_name}:#{user.password}")
-    		  user.save!
-    		  cookies[:authorization_token]={:value=>user.authorization_token,:expires=>10.years.from_now}
+    		  user.remember!(cookies)
     		else
-    		  cookies.delete(:remember_me)
-    		  cookies.delete(:authorization_token)
+    		  user.forget!(cookies)
     		end
     		flash[:notice]="User #{user.screen_name} logged in!"
     		redirect_to_forwarding_url

@@ -35,4 +35,16 @@ class User < ActiveRecord::Base
   def clear_password!
     self.password=nil
   end
+  
+  def remember!(cookies)
+    cookies[:remember_me]={:value=>"1",:expires=>10.years.from_now}
+    		  self.authorization_token=Digest::SHA1.hexdigest("#{screen_name}:#{password}")
+    		  save!
+    		  cookies[:authorization_token]={:value=>authorization_token,:expires=>10.years.from_now}
+  end
+  
+  def forget!(cookies)
+    cookies.delete(:remember_me)
+    cookies.delete(:authorization_token)
+  end
 end

@@ -10,5 +10,4 @@ class SiteController < ApplicationController
   def help
     @title="RailsSpace Help"
   end
-
 end
