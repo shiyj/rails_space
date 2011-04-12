@@ -7,9 +7,8 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 
-  <!-->google analytics 谷歌分析代码<-->
+  <!--google analytics 谷歌分析代码-->
   <script type="text/javascript">
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-22575624-1']);
   _gaq.push(['_trackPageview']);
@@ -21,19 +20,11 @@
   })();
 
 </script>
-<script>
-function initialize() {
-    var latlng = new google.maps.LatLng(-34.397, 150.644);
-    var myOptions = {
-      zoom: 8,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-  }
-  </script>
+<%if params["controller"]=="google"%>
+
+<%end%>
 </head>
-<body onload="initialize()">
+<body>
     <div id="whole_page">
     <div id="header">RailsSpace</div>
     <div id="nav">

@@ -1,5 +1,5 @@
 class GoogleController < ApplicationController
-  layout "googlemap"
+  #layout "googlemap"
   def index
     @title="Google Map"
   end
