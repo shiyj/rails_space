@@ -16975,3 +16975,215 @@ Started GET "/google/index" for 127.0.0.1 at Tue Apr 12 23:45:02 +0800 2011
   Processing by GoogleController#index as HTML
 Rendered google/index.html.erb within layouts/application (14.9ms)
 Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Apr 12 23:56:33 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Apr 13 10:03:29 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 149ms (Views: 148.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Wed Apr 13 10:03:41 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 64ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Wed Apr 13 10:03:43 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Wed Apr 13 10:04:44 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 101ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Wed Apr 13 10:04:46 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Wed Apr 13 10:04:47 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 76ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Wed Apr 13 10:36:45 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Wed Apr 13 10:36:48 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Wed Apr 13 10:40:24 +0800 2011
+
+
+Started GET "/site/about" for 127.0.0.1 at Wed Apr 13 10:40:39 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 74ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Wed Apr 13 10:40:42 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Wed Apr 13 10:42:29 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 99ms (Views: 98.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Wed Apr 13 10:44:02 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at Wed Apr 13 10:51:03 +0800 2011
+  Processing by UserController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."authorization_token" = 'authorization_token' LIMIT 1
+Redirected to http://127.0.0.1:3000/user/login
+Completed 302 Found in 168ms
+
+
+Started GET "/user/login" for 127.0.0.1 at Wed Apr 13 10:51:03 +0800 2011
+  Processing by UserController#login as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."authorization_token" = 'authorization_token' LIMIT 1[0m
+Rendered user/login.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 107ms (Views: 88.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/user/login" for 127.0.0.1 at Wed Apr 13 10:56:25 +0800 2011
+  Processing by UserController#login as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."authorization_token" = 'authorization_token' LIMIT 1
+Rendered user/login.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 63ms (Views: 44.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/login" for 127.0.0.1 at Wed Apr 13 10:58:34 +0800 2011
+  Processing by UserController#login as HTML
+Rendered user/login.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 66ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/login" for 127.0.0.1 at Wed Apr 13 11:07:34 +0800 2011
+  Processing by UserController#login as HTML
+Rendered user/login.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 131ms (Views: 109.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/login" for 127.0.0.1 at Wed Apr 13 11:07:40 +0800 2011
+  Processing by UserController#login as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."authorization_token" = 'authorization_token' LIMIT 1[0m
+Rendered user/login.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 61ms (Views: 43.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user/login" for 127.0.0.1 at Wed Apr 13 11:07:48 +0800 2011
+  Processing by UserController#login as HTML
+  Parameters: {"commit"=>"Login!", "authenticity_token"=>"VWiLjSm4ouoMRNUPjwohvHI3yQWeyj89CVmTYu5hbdY=", "utf8"=>"\342\234\223", "user"=>{"remember_me"=>"1", "password"=>"[FILTERED]", "screen_name"=>""}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."authorization_token" = 'authorization_token' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."password" = '' AND "users"."screen_name" = '' LIMIT 1[0m
+Rendered user/login.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 127ms (Views: 107.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/user/register" for 127.0.0.1 at Wed Apr 13 11:08:40 +0800 2011
+  Processing by UserController#register as HTML
+Rendered user/register.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 90ms (Views: 89.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/login" for 127.0.0.1 at Wed Apr 13 11:08:42 +0800 2011
+  Processing by UserController#login as HTML
+Rendered user/login.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 59ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/register" for 127.0.0.1 at Wed Apr 13 11:08:44 +0800 2011
+  Processing by UserController#register as HTML
+Rendered user/register.html.erb within layouts/application (94.4ms)
+Completed 200 OK in 125ms (Views: 123.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Wed Apr 13 11:24:54 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 74ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Wed Apr 13 11:24:56 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Wed Apr 13 11:24:57 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Wed Apr 13 11:24:58 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Apr 15 10:36:09 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 147ms (Views: 146.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Fri Apr 15 10:36:21 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Fri Apr 15 10:36:22 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Fri Apr 15 10:36:28 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/help" for 127.0.0.1 at Fri Apr 15 10:36:30 +0800 2011
+  Processing by SiteController#help as HTML
+Rendered site/help.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Fri Apr 15 10:36:35 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)

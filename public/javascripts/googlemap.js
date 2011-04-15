@@ -37,7 +37,7 @@ Demo.init = function() {
     title:"郑州大学菊园1号楼"
   });
   var dragMarker = new google.maps.Marker({
-    position: new google.maps.LatLng(34.808000, 113.5337557595825), 
+    position: new google.maps.LatLng(34.82114436119465, 113.52747402606963), 
     map: Demo.map,
     title:"Drage Me!",
     draggable:true
