@@ -4,6 +4,7 @@ class UserController < ApplicationController
   before_filter :protect,:only=>:index
   def index
     @title="RailsSpace User Hub"
+    @user=User.find(session[:user_id])
   end
 
   def register
@@ -52,6 +53,23 @@ class UserController < ApplicationController
     redirect_to :action=>"index",:controller=>"site"
   end
   
+  def edit
+  	@title="Edit basic info"
+  	@user=User.find(session[:user_id])
+  	if param_posted?(:user)
+  		if @user.current_password?(params)
+				if @user.update_attributes(params[:user])
+					flash[:notice]="Information have been updated!"
+					redirect_to :action=>"index"
+				end
+			else
+				puts @user.current_password
+				@user.password_errors(params)
+			end
+  	end
+  	@user.clear_password!
+  end
+  
   private
   #保护页面函数
   def protect
@@ -60,7 +78,7 @@ class UserController < ApplicationController
       session[:protected_page]=request.fullpath
       flash[:notice]="Please log in first"
       redirect_to :action=>"login"
-      #return false是打断往下大链,即before_filter往下执行大内容
+      #return false是打断往下的链,即before_filter往下执行的内容
       #这就是before_filter的功效.
       return false
     end
@@ -81,4 +99,6 @@ class UserController < ApplicationController
     		redirect_to:action=>"index"
     end
   end
+  
+  
 end

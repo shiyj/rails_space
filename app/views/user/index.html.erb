@@ -1,2 +1,11 @@
 <h1>Welcome to User Center</h1>
 <p>Hello User,this page is just for you!</p>
+<h2>Your basic information</h2>
+<ul>
+	<li>screen_name:<%=@user.screen_name %></li>
+	<li>Email:<%=@user.email %></li>
+	<li>Password:******</li>
+</ul>
+<ul>
+	<li><%=link_to "Edit my info",:action=>"edit" %></li>
+<ul>

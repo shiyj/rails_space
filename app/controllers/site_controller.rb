@@ -10,4 +10,8 @@ class SiteController < ApplicationController
   def help
     @title="RailsSpace Help"
   end
+  
+  def log
+  	@title="Site Update Log"
+  end
 end

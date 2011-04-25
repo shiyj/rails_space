@@ -8,6 +8,7 @@ class UserTest < ActiveSupport::TestCase
   	@valid_user=users(:valid_user)
   	@invalid_user=users(:invalid_user)
   end
+  
   test "the valid user" do
   	assert @valid_user.valid? 
   end

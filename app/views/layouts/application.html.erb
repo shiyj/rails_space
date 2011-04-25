@@ -31,10 +31,12 @@
     	<span style="float:right">
     	  <%if logged_in? -%>
 		      <%=nav_link "Hub","user","index"%>|
-		      <%=nav_link "Logout","user","logout"  %>
+		      <%=nav_link "Logout","user","logout"  %>|
+		      <%=nav_link "Log","site","log" %>
 		    <%else-%>
 		      <%=nav_link "Register","user","register"%>|
-		      <%=nav_link "Login","user","login"%>
+		      <%=nav_link "Login","user","login"%>|
+		      <%=nav_link "Log","site","log" %>
 		     <%end%>
     	</span>
       <%=nav_link "Home","site"%>|
@@ -48,9 +50,10 @@
       <% end-%>
       <%=yield%>
     </div>
-    <div class="debug_dump">
       <% if ENV["RAILS_ENV"]=="development" %>
       <p>调试数据,仅在开发模式可见!</p>
+      <div class="debug_dump">
+      
       <div id="debug"">
       	<a href="#" onclick="Element.toggle('params_debug_info');return false">
       	params</a>|
@@ -77,8 +80,8 @@
       		<%=debug(cookies)%>
       	</fieldset>
       </div>
-      <%end%>
     </div>
+    <%end%>
     </div>
   </body>
 </html>

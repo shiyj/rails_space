@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessor :remember_me
+  attr_accessor :current_password
   SCREEN_NAME_MIN_LENGTH=4
   SCREEN_NAME_MAX_LENGTH=20
   PASSWORD_MIN_LENGTH=4
@@ -12,6 +13,7 @@ class User < ActiveRecord::Base
   PASSWORD_SIZE=20
   EMAIL_SIZE=30
   validates_uniqueness_of :screen_name,:email
+  validates_confirmation_of :password
   validates_length_of:screen_name, :within=>SCREEN_NAME_RANGE
   validates_length_of:password,:within=>PASSWORD_RANGE
   validates_length_of:email,:maximum=>EMAIL_MAX_LENGTH
@@ -34,6 +36,8 @@ class User < ActiveRecord::Base
   
   def clear_password!
     self.password=nil
+    self.password_confirmation=nil
+    self.current_password=nil
   end
   
   def remember!(cookies)
@@ -46,5 +50,20 @@ class User < ActiveRecord::Base
   def forget!(cookies)
     cookies.delete(:remember_me)
     cookies.delete(:authorization_token)
+  end
+  
+  #验证修改密码时提交的原始密码是否正确
+  def current_password?(params)
+  	current_password=params[:user][:current_password]
+  	password==current_password
+  	#puts 'hello world'
+		#puts current_password
+  	#puts password
+  end
+  def password_errors(params)
+  	self.password=params[:user][:password]
+  	self.password_confirmation=params[:user][:password_confirmation]
+  	valid?
+  	errors.add(:current_password,"不正确")
   end
 end

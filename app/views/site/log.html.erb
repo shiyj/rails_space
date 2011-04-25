@@ -1,0 +1,21 @@
+<script type="text/javascript">
+	$(document).ready(function(){
+		function callback(){
+			//alert("finishedSSS!");
+		}
+		$("#toggle").click(
+			function(){
+				$("#mylog").toggle(3000,callback);
+			}
+		)
+	})
+</script>
+<p>以下为网址更新日志<input type="button"  value="+" id="toggle"/></p>
+<div id="mylog">
+<ol>
+<li><hr width="100%">2011.4.7:我在网址上加入了google analytics</hr></li>
+<li><hr width="100%">2011.4.11:我在网址中加入拉Google Map. </hr></li>
+<li><hr width="100%">2011.4.12:修正了Google Map,并调整js.--:可以睡个好觉喽......</hr></li>
+<li><hr width="100%">2011.4.25:加入了jQuery,修改路由中可以用用户名作url,不过没有安全验证......</hr></li>
+</ol>
+</div>

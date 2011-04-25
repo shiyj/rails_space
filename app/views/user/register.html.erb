@@ -3,13 +3,7 @@
   <fieldset>
     <legend>Enter Your Details</legend>
     <!--验证错误信息-->
-    <% if @user.present? && @user.errors.any? %>  
-      <ul>  
-      <% @user.errors.full_messages.each do |msg| %>  
-      <li><%= msg %></li>  
-      <% end %>  
-      </ul>  
-    <% end %>  
+   <%= render :partial=>"errors_show",:locals=>{:user=>@user}%>
     <div class="form_row">
       <label for="screen_name">Screen name:</label>
       <%= form.text_field :screen_name,
@@ -29,6 +23,9 @@
                               :maxlength=>User::PASSWORD_MAX_LENGTH %>
     </div>
     <div class="form_row">
-      <%=submit_tag "Register!", :class=>"submit" %>
+    	<!--请将下段注释出去即可展示登录功能-->
+    	<label>Register not allowed!</label>
+      <!--<%=submit_tag "Register!", :class=>"submit" %>-->
+    </div>
   </fieldset>
 <%end%>

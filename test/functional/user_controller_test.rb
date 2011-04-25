@@ -28,23 +28,15 @@ class UserControllerTest < ActionController::TestCase
   test "should get register" do
     get :register
     assert_response :success
-    assert_tag "form",:attributes=>{:action=>"/user/register",:method=>"post"}
-    assert_tag "input",
-      :attributes=>{:name=>"user[screen_name]",
-        :type=>"text",
-        :size=>User::SCREEN_NAME_SIZE,
-        :maxlength=>User::SCREEN_NAME_MAX_LENGTH}
-    assert_tag "input",
-      :attributes=>{:name=>"user[password]",
-        :type=>"password",
-        :size=>User::PASSWORD_SIZE,
-        :maxlength=>User::PASSWORD_MAX_LENGTH}
-    assert_tag "input",
-      :attributes=>{:name=>"user[email]",
-        :type=>"text",
-        :size=>User::EMAIL_SIZE,
-        :maxlength=>User::EMAIL_MAX_LENGTH}
-    assert_tag "input",:attributes=>{:type=>"submit",:value=>"Register!"}
+    #assert_tag "form",:attributes=>{:action=>"/user/register",:method=>"post"}
+    assert_form_tag "/user/register"
+    #assert_tag "input",      :attributes=>{:name=>"user[screen_name]",        :type=>"text",        :size=>User::SCREEN_NAME_SIZE,        :maxlength=>User::SCREEN_NAME_MAX_LENGTH}
+    assert_screen_name_field
+    #assert_tag "input",      :attributes=>{:name=>"user[password]",        :type=>"password",        :size=>User::PASSWORD_SIZE,        :maxlength=>User::PASSWORD_MAX_LENGTH}
+    assert_password_filed
+    #assert_tag "input",      :attributes=>{:name=>"user[email]",        :type=>"text",        :size=>User::EMAIL_SIZE,        :maxlength=>User::EMAIL_MAX_LENGTH}
+    assert_email_field
+    #assert_tag "input",:attributes=>{:type=>"submit",:value=>"Register!"}
   end
   
   test "registration success" do
@@ -148,6 +140,21 @@ class UserControllerTest < ActionController::TestCase
     assert_equal user.authorization_token,cookies["authorization_token"]
     #assert_equal 10.years.from_now(test_time),cookie_expires(:authorization_token)
   end
+  
+  test "edit page" do
+  	authorize @valid_user
+  	get :edit
+  	title =assigns(:title)
+  	assert_equal "Edit basic info",title
+  	assert_response :success
+  	assert_template "edit"
+  	assert_form_tag "/user/edit"
+  	assert_email_field @valid_user.email
+  	assert_password_filed "current_password"
+  	assert_password_filed
+  	assert_password_filed "password_confirmation"
+  	assert_submit_button "Update"
+  end
   ###########################################
   #以下为函数定义部分
   ###########################################
@@ -167,5 +174,15 @@ class UserControllerTest < ActionController::TestCase
   def authorize(user)
     @request.session[:user_id]=user.id
   end
-  
+  #简化断言方式,只是视图上的判断,不牵涉验证信息.
+  def assert_email_field(email=nil,options={})
+  	assert_input_field("user[email]",email,"text",User::EMAIL_SIZE,User::EMAIL_MAX_LENGTH,options)
+  end
+  def assert_password_filed(password_field_name="password",options={})
+  	blank=nil
+  	assert_input_field("user[#{password_field_name}]",blank,"password",User::PASSWORD_SIZE,User::PASSWORD_MAX_LENGTH,options)
+  end
+  def assert_screen_name_field(screen_name=nil,options={})
+  	assert_input_field("user[screen_name]",screen_name,"text",User::SCREEN_NAME_SIZE,User::SCREEN_NAME_MAX_LENGTH,options)
+  end
 end
