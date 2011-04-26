@@ -2,7 +2,7 @@ Rails Space是 Michael Hartl 和Aurelius Prochazka的开源项目.然而自从06
 本人本着学习的目的,对Rails Space进行迁移,使之能够运行在Rails 3中.
 目前正在逐步的增加中.将会在github和heroku中同步更新.
 
-项目演示请看:http://myengin.heroku.com/
+项目演示请看: http://myengin.heroku.com/
 	注:因heroku的数据库限制,此处禁止注册.你可以使用:
 		screen_name:abcde
 		password:abcde
@@ -14,3 +14,4 @@ Rails Space是 Michael Hartl 和Aurelius Prochazka的开源项目.然而自从06
 2011.4.7:我在网址上加入了google analytics
 2011.4.11:我在网址中加入拉Google Map.
 2011.4.12:修正了Google Map,并调整js.--:可以睡个好觉喽......
+2011.4.25:加入了jQuery,修改路由中可以用用户名作url,不过没有安全验证......

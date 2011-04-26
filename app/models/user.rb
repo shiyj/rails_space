@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+
+	has_one :spec	
+	
   attr_accessor :remember_me
   attr_accessor :current_password
   SCREEN_NAME_MIN_LENGTH=4

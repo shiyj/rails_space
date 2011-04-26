@@ -5,4 +5,4 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 RailsSpace::Application.initialize!
-
+DB_STRING_MAX_LENGTH=255
