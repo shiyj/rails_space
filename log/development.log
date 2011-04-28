@@ -22394,3 +22394,45 @@ Started GET "/" for 127.0.0.1 at Thu Apr 28 07:39:16 +0800 2011
   Processing by SiteController#index as HTML
 Rendered site/index.html.erb within layouts/application (97.5ms)
 Completed 200 OK in 202ms (Views: 201.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Thu Apr 28 16:59:17 +0800 2011
+
+ActionController::RoutingError (No route matches "/about"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at Thu Apr 28 16:59:21 +0800 2011
+
+ActionController::RoutingError (No route matches "/about"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/about" for 127.0.0.1 at Thu Apr 28 16:59:21 +0800 2011
+
+ActionController::RoutingError (No route matches "/about"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Apr 28 16:59:24 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 153ms (Views: 152.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Thu Apr 28 16:59:26 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 65ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Thu Apr 28 16:59:29 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 102ms (Views: 48.1ms | ActiveRecord: 0.0ms)
