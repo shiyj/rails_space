@@ -7,7 +7,7 @@ class Spec < ActiveRecord::Base
 	STRING_FIELDS=%w(first_name last_name city)
 	VALID_GENDERS=["男","女"]
 	START_YEAR =1900
-	VALID_DATES= DateTime.new(START_YEAR)..DataTime.now
+	VALID_DATES= DateTime.new(START_YEAR)..DateTime.now
 	
 	validates_length_of STRING_FIELDS,
 										 :maximum=>DB_STRING_MAX_LENGTH

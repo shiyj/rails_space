@@ -22448,3 +22448,50 @@ Started GET "/google/index" for 127.0.0.1 at Sun May 01 20:39:23 +0800 2011
   Processing by GoogleController#index as HTML
 Rendered google/index.html.erb within layouts/application (20.3ms)
 Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/login" for 127.0.0.1 at Sun May 01 20:57:41 +0800 2011
+  Processing by UserController#login as HTML
+Rendered user/login.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 96ms (Views: 55.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/login" for 127.0.0.1 at Sun May 01 20:57:51 +0800 2011
+  Processing by UserController#login as HTML
+  Parameters: {"commit"=>"Login!", "authenticity_token"=>"9Jablz6r2Yj6GYDVjhfE75wvSSPx7m1oDeHShkBAAiY=", "utf8"=>"\342\234\223", "user"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "screen_name"=>"engin"}}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."password" = 'aaaaaa' AND "users"."screen_name" = 'engin' LIMIT 1
+Redirected to http://127.0.0.1:3000/user/index
+Completed 302 Found in 90ms
+
+
+Started GET "/user/index" for 127.0.0.1 at Sun May 01 20:57:51 +0800 2011
+  Processing by UserController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered user/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 63ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at Sun May 01 20:57:53 +0800 2011
+  Processing by UserController#edit as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered user/_errors_show.html.erb (0.7ms)
+Rendered user/_password_field.html.erb (1.0ms)
+Rendered user/_password_field.html.erb (0.9ms)
+Rendered user/_password_field.html.erb (0.9ms)
+Rendered user/edit.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 113ms (Views: 94.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/edit" for 127.0.0.1 at Sun May 01 20:58:03 +0800 2011
+  Processing by UserController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered user/_errors_show.html.erb (0.8ms)
+Rendered user/_password_field.html.erb (1.1ms)
+Rendered user/_password_field.html.erb (0.9ms)
+Rendered user/_password_field.html.erb (0.9ms)
+Rendered user/edit.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 95ms (Views: 75.2ms | ActiveRecord: 0.4ms)
