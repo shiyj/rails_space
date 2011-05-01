@@ -22436,3 +22436,15 @@ Started GET "/site/index" for 127.0.0.1 at Thu Apr 28 16:59:29 +0800 2011
   Processing by SiteController#index as HTML
 Rendered site/index.html.erb within layouts/application (11.4ms)
 Completed 200 OK in 102ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sun May 01 20:39:19 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (58.7ms)
+Completed 200 OK in 150ms (Views: 149.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Sun May 01 20:39:23 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.0ms)
