@@ -10,7 +10,7 @@ class Spec < ActiveRecord::Base
 	VALID_DATES= DateTime.new(START_YEAR)..DateTime.now
 	
 	validates_length_of STRING_FIELDS,
-										 :maximum=>DB_STRING_MAX_LENGTH
+										 :maximum=>255
 	validates_inclusion_of :gender,
 												:in=>VALID_GENDERS,
 												:allow_nil=>true,
