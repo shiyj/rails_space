@@ -22495,3 +22495,40 @@ Rendered user/_password_field.html.erb (0.9ms)
 Rendered user/_password_field.html.erb (0.9ms)
 Rendered user/edit.html.erb within layouts/application (47.5ms)
 Completed 200 OK in 95ms (Views: 75.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/index" for 127.0.0.1 at Sun May 01 21:27:58 +0800 2011
+  Processing by UserController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered user/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 64ms (Views: 49.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Sun May 01 21:42:50 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/about" for 127.0.0.1 at Sun May 01 21:42:56 +0800 2011
+  Processing by SiteController#about as HTML
+Rendered site/about.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu May 05 00:53:32 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 144ms (Views: 143.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/site/index" for 127.0.0.1 at Thu May 05 00:53:35 +0800 2011
+  Processing by SiteController#index as HTML
+Rendered site/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/google/index" for 127.0.0.1 at Thu May 05 00:53:37 +0800 2011
+  Processing by GoogleController#index as HTML
+Rendered google/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.0ms)
