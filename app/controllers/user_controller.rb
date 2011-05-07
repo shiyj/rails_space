@@ -1,10 +1,13 @@
 require 'digest/sha1'
 class UserController < ApplicationController
   include ApplicationHelper
+  helper :profile
   before_filter :protect,:only=>:index
   def index
     @title="RailsSpace User Hub"
     @user=User.find(session[:user_id])
+    @user ||= Spec.new
+    @spec=@user.spec
   end
 
   def register
@@ -83,10 +86,7 @@ class UserController < ApplicationController
       return false
     end
   end
-  #验证表单是否提交
-  def param_posted?(symbol)
-    request.post? and params[symbol]
-  end
+
   #友好转向,重定向到先前的页面
   def redirect_to_forwarding_url
     #友好的转向页面

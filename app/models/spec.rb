@@ -15,9 +15,12 @@ class Spec < ActiveRecord::Base
 												:in=>VALID_GENDERS,
 												:allow_nil=>true,
 												:message=>"性别必须是男或者女"
-	validate_inclusion_of :birthdate,
+	validates_inclusion_of :birthdate,
 												:in=>VALID_DATES,
 												:allow_nil=>true,
 												:message=>"生日日期错误"
+	def full_name
+		[first_name,last_name].join(" ")
+	end
 												
 end

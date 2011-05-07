@@ -1,4 +1,6 @@
 RailsSpace::Application.routes.draw do
+  get "spec/edit"
+
   get "profile/index"
 
   get "profile/show"

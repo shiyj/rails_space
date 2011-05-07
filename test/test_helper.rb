@@ -32,5 +32,8 @@ class ActiveSupport::TestCase
   	tag.merge!(options)
   	assert_tag tag
   end
-  
+  #测试中需要的对用户身份进行认证.
+  def authorize(user)
+  	@request.session[:user_id]=user.id
+  end
 end

@@ -1,0 +1,24 @@
+<% form_for :spec do |form| %>
+<fieldset>
+	<legend><%=@title %></legend>
+	<%= render :partial=>"/user/errors_show",:locals=>{:user=>@spec}%>
+	<%= text_field_for form ,"first_name"%>
+	<%= text_field_for form ,"last_name"%>
+	<div class ="form_row">
+		<label for="gender">性别:</label>
+		<%= radio_button :spec,:gender,"男"%>男
+		<%= radio_button :spec,:gender,"女"%>女
+	</div>
+	<div class="form_row">
+		<label for="birthdate">生日</label>
+		<%= date_select :spec,:birthdate,
+												  :start_year=>Spec::START_YEAR,
+												  :end_year=>Time.now.year,
+												  :include_blan=>true,
+												  :order=>[:month,:day,:year]%>
+	</div>
+	
+	<%= text_field_for form ,"city"%>
+	<%=submit_tag "更新",:class=>"submit" %>
+</fieldset>
+<%end%>

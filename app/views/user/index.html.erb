@@ -1,11 +1,24 @@
 <h1>Welcome to User Center</h1>
 <p>Hello User,this page is just for you!</p>
-<h2>Your basic information</h2>
-<ul>
-	<li>screen_name:<%=@user.screen_name %></li>
-	<li>Email:<%=@user.email %></li>
-	<li>Password:******</li>
-</ul>
-<ul>
-	<li><%=link_to "Edit my info",:action=>"edit" %></li>
-<ul>
+<div id="basic">
+	<h2>
+	<span>Your basic information</span>
+	<span><%=link_to "(edit)",:action=>"edit"%></span>
+	</h2>
+	<ul>
+		<li>screen_name:<%=@user.screen_name %></li>
+		<li>Email:<%=@user.email %></li>
+		<li>Password:******</li>
+	</ul>
+</div>
+<div id="spec">
+	<h2>
+	<span>Your Spec information</span>
+	<span><%=link_to "(edit)",:controller=>"spec",:action=>"edit"%></span>
+	</h2>
+	<table>
+		<%= render:partial=>"spec/field_row",:collection=>Spec::ALL_FIELDS %>
+		<p>aaa<%=@user.spec.first_name%></p>
+	</table>
+	<p>aaaa:<%=@user.spec.first_name%></p>
+</div>

@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
       user.login!(session) if user
     end
   end
+   #验证表单是否提交
+  def param_posted?(symbol)
+    request.post? and params[symbol]
+  end
 end
