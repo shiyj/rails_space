@@ -7,6 +7,7 @@ gem 'jquery-rails'
 
 gem 'sqlite3'
 gem 'mongrel'
+gem 'will_paginate'
 # Use unicorn as the web server
 # gem 'unicorn'
 

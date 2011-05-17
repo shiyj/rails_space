@@ -1,4 +1,5 @@
 class SpecController < ApplicationController
+	before_filter :protect
   def edit
   	@title="编辑用户模型"
   	@user=User.find(session[:user_id])

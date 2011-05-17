@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 	has_one :spec	
-	
+	has_one :faq
   attr_accessor :remember_me
   attr_accessor :current_password
   SCREEN_NAME_MIN_LENGTH=4
@@ -28,6 +28,10 @@ class User < ActiveRecord::Base
   validates_format_of  :email,
                       :with=>/^[A-Z0-9._%-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i,
                       :message=>"must be a valid email address"  
+
+	def avatar
+		Avatar.new(self)
+	end
   def login!(session)
     session[:user_id]=id
   end
@@ -68,5 +72,9 @@ class User < ActiveRecord::Base
   	self.password_confirmation=params[:user][:password_confirmation]
   	valid?
   	errors.add(:current_password,"不正确")
+  end
+  
+  def name
+  	spec.full_name.or_else(screen_name)
   end
 end

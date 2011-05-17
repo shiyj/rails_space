@@ -1,4 +1,1 @@
-<tr>
-	<td class="label><%=field_row%>:</td>
-	<td><%=h @user.spec[field_row] %></td>
-</tr>
+<li><%=field_row.humanize%>:<%=h @user.spec[field_row] %></li>

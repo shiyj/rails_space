@@ -1,24 +1,47 @@
-<h1>Welcome to User Center</h1>
-<p>Hello User,this page is just for you!</p>
-<div id="basic">
+<div id="userhub">
+<div id= "userleftinfo">
+		<h2>
+		<span>Your basic information</span>
+		<span><%=link_to "(edit)",:action=>"edit"%></span>
+		</h2>
+		<ul>
+			<li>screen_name:<%=@user.screen_name %></li>
+			<li>Email:<%=@user.email %></li>
+			<li>Password:******</li>
+		</ul>
+		<h2>
+		<span>Your Spec information</span>
+		<span><%=link_to "(edit)",:controller=>"spec",:action=>"edit"%></span>
+		</h2>
+		<ul>
+			<%= render:partial=>"spec/field_row",:collection=>Spec::ALL_FIELDS %>
+		</ul>
+		<h2>
+			<span>Faq</span>
+			<span><%=link_to "(edit)",:controller=>"faq",:action=>"edit" %></span>
+		</h2>
+		<ul>
+			<%= render :partial=>'faq/sidebar_box',:collection=>Faq::FAVORITES %>
+		</ul>
+		<h2>
+			<span>头像</span>
+			<span><%=link_to "(edit)",:controller=>"avatar",:action=>"upload" %></span>
+		</h2>
+		<ul>
+			<%=render :partial=>'avatar/sidebar_box'%>
+		</ul>
+	</div>
+<div id="userrightinfo">
 	<h2>
-	<span>Your basic information</span>
-	<span><%=link_to "(edit)",:action=>"edit"%></span>
+	<%=h @spec.full_name.or_else("Your Name")%>
 	</h2>
-	<ul>
-		<li>screen_name:<%=@user.screen_name %></li>
-		<li>Email:<%=@user.email %></li>
-		<li>Password:******</li>
-	</ul>
+	<hr noshade />
+	Profile URL:<%=link_to profile_for(@user), profile_for(@user) %>
+	<hr noshade />
+	My Bio:
+	<span class="edit_link"><%=link_to "(edit)",:controller=>"faq",:action=>"edit" %></span>
+	<div id= "bio" class="faq_answer">
+		<%= sanitize @faq.bio %>
+	</div>
 </div>
-<div id="spec">
-	<h2>
-	<span>Your Spec information</span>
-	<span><%=link_to "(edit)",:controller=>"spec",:action=>"edit"%></span>
-	</h2>
-	<table>
-		<%= render:partial=>"spec/field_row",:collection=>Spec::ALL_FIELDS %>
-		<p>aaa<%=@user.spec.first_name%></p>
-	</table>
-	<p>aaaa:<%=@user.spec.first_name%></p>
 </div>

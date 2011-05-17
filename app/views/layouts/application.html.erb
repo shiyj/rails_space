@@ -41,6 +41,7 @@
       <%=nav_link "Home","site"%>|
       <%=nav_link "About","site", "about" %>|
       <%=nav_link "Help","site", "help" %>|
+      <%=nav_link "Community","community","index" %>|
       <%=nav_link "GoogleMap","google","index"%>
     </div>
     <div id="content">
@@ -49,10 +50,11 @@
       <% end-%>
       <%=yield%>
     </div>
+    
       <% if ENV["RAILS_ENV"]=="development" %>
-      <p>调试数据,仅在开发模式可见!</p>
-      <div class="debug_dump">
       
+      <div class="debug_dump">
+      <p>调试数据,仅在开发模式可见!</p>
       <div id="debug"">
       	<a href="#" onclick="Element.toggle('params_debug_info');return false">
       	params</a>|

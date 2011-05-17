@@ -14,4 +14,16 @@ class ApplicationController < ActionController::Base
   def param_posted?(symbol)
     request.post? and params[symbol]
   end
+    #保护页面函数
+  def protect
+    unless logged_in?
+      #友好的转向页面
+      session[:protected_page]=request.fullpath
+      flash[:notice]="Please log in first"
+      redirect_to :action=>"login"
+      #return false是打断往下的链,即before_filter往下执行的内容
+      #这就是before_filter的功效.
+      return false
+    end
+  end
 end

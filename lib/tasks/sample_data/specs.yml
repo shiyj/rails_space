@@ -1,0 +1,1219 @@
+BAmes:
+  user_id: 1000
+  first_name: Bruce
+  last_name: Ames
+  gender: 男
+  birthdate: 1927-01-01 
+JAndelin:
+  user_id: 1001
+  first_name: John
+  last_name: Andelin
+  gender: 男
+  birthdate: 1941-01-01 
+MArens:
+  user_id: 1002
+  first_name: Moshe
+  last_name: Arens
+  gender: 男
+  birthdate: 1930-01-01 
+HBabcock:
+  user_id: 1003
+  first_name: Horace
+  last_name: Babcock
+  gender: 男
+  birthdate: 1944-01-01 
+WBallhaus:
+  user_id: 1004
+  first_name: William
+  last_name: Ballhaus
+  gender: 男
+  birthdate: 1928-01-01 
+ABeckman:
+  user_id: 1005
+  first_name: Arnold
+  last_name: Beckman
+  gender: 男
+  birthdate: 1934-01-01 
+FBorman:
+  user_id: 1006
+  first_name: Frank
+  last_name: Borman
+  gender: 男
+  birthdate: 1916-01-01 
+RBower:
+  user_id: 1007
+  first_name: Robert
+  last_name: Bower
+  gender: 男
+  birthdate: 1951-01-01 
+JBoyd:
+  user_id: 1008
+  first_name: James
+  last_name: Boyd
+  gender: 男
+  birthdate: 1916-01-01 
+LBrewer:
+  user_id: 1009
+  first_name: Leo
+  last_name: Brewer
+  gender: 男
+  birthdate: 1924-01-01 
+RBrewer:
+  user_id: 1010
+  first_name: Richard
+  last_name: Brewer
+  gender: 男
+  birthdate: 1944-01-01 
+ABryson:
+  user_id: 1011
+  first_name: Arthur
+  last_name: Bryson
+  gender: 男
+  birthdate: 1941-01-01 
+CBurton:
+  user_id: 1012
+  first_name: Clifford
+  last_name: Burton
+  gender: 男
+  birthdate: 1924-01-01 
+FCapra:
+  user_id: 1013
+  first_name: Frank
+  last_name: Capra
+  gender: 男
+  birthdate: 1916-01-01 
+WCarroll:
+  user_id: 1014
+  first_name: William
+  last_name: Carroll
+  gender: 男
+  birthdate: 1946-01-01 
+MCarus:
+  user_id: 1015
+  first_name: M.
+  last_name: Carus
+  gender: 男
+  birthdate: 1954-01-01 
+MChang:
+  user_id: 1016
+  first_name: Milton
+  last_name: Chang
+  gender: 男
+  birthdate: 1952-01-01 
+JCharyk:
+  user_id: 1017
+  first_name: Joseph
+  last_name: Charyk
+  gender: 男
+  birthdate: 1916-01-01 
+HChenery:
+  user_id: 1018
+  first_name: Hollis
+  last_name: Chenery
+  gender: 男
+  birthdate: 1931-01-01 
+AChester:
+  user_id: 1019
+  first_name: Arthur
+  last_name: Chester
+  gender: 男
+  birthdate: 1947-01-01 
+PChou:
+  user_id: 1020
+  first_name: Pei-Yuan
+  last_name: Chou
+  gender: 男
+  birthdate: 1935-01-01 
+EClark:
+  user_id: 1021
+  first_name: Earnest
+  last_name: Clark
+  gender: 男
+  birthdate: 1931-01-01 
+FClauser:
+  user_id: 1022
+  first_name: Francis
+  last_name: Clauser
+  gender: 男
+  birthdate: 1916-01-01 
+RClough:
+  user_id: 1023
+  first_name: Ray
+  last_name: Clough
+  gender: 男
+  birthdate: 1946-01-01 
+JCole:
+  user_id: 1024
+  first_name: Julian
+  last_name: Cole
+  gender: 男
+  birthdate: 1921-01-01 
+SColeman:
+  user_id: 1025
+  first_name: Sidney
+  last_name: Coleman
+  gender: 男
+  birthdate: 1940-01-01 
+HColvin:
+  user_id: 1026
+  first_name: Hugh
+  last_name: Colvin
+  gender: 男
+  birthdate: 1940-01-01 
+RConn:
+  user_id: 1027
+  first_name: Robert
+  last_name: Conn
+  gender: 男
+  birthdate: 1948-01-01 
+FCorbató:
+  user_id: 1028
+  first_name: Fernando
+  last_name: Corbató
+  gender: 男
+  birthdate: 1953-01-01 
+FCordova:
+  user_id: 1029
+  first_name: France
+  last_name: Cordova
+  gender: 女
+  birthdate: 1957-01-01 
+HCrane:
+  user_id: 1030
+  first_name: H.
+  last_name: Crane
+  gender: 男
+  birthdate: 1918-01-01 
+FDahlen:
+  user_id: 1031
+  first_name: Francis
+  last_name: Dahlen
+  gender: 男
+  birthdate: 1957-01-01 
+TDames:
+  user_id: 1032
+  first_name: Trent
+  last_name: Dames
+  gender: 男
+  birthdate: 1943-01-01 
+HDavenport:
+  user_id: 1033
+  first_name: Horace
+  last_name: Davenport
+  gender: 男
+  birthdate: 1916-01-01 
+FDavis:
+  user_id: 1034
+  first_name: Frank
+  last_name: Davis
+  gender: 男
+  birthdate: 1918-01-01 
+MDavis:
+  user_id: 1035
+  first_name: Mark
+  last_name: Davis
+  gender: 男
+  birthdate: 1955-01-01 
+RDavis:
+  user_id: 1036
+  first_name: Ronald
+  last_name: Davis
+  gender: 男
+  birthdate: 1957-01-01 
+RDelauer:
+  user_id: 1037
+  first_name: Richard
+  last_name: Delauer
+  gender: 男
+  birthdate: 1935-01-01 
+SDhawan:
+  user_id: 1038
+  first_name: Satish
+  last_name: Dhawan
+  gender: 男
+  birthdate: 1919-01-01 
+JDuderstadt:
+  user_id: 1039
+  first_name: James
+  last_name: Duderstadt
+  gender: 男
+  birthdate: 1939-01-01 
+LDunn:
+  user_id: 1040
+  first_name: Louis
+  last_name: Dunn
+  gender: 男
+  birthdate: 1924-01-01 
+GEaton:
+  user_id: 1041
+  first_name: Gordon
+  last_name: Eaton
+  gender: 男
+  birthdate: 1945-01-01 
+REckis:
+  user_id: 1042
+  first_name: Rollin
+  last_name: Eckis
+  gender: 男
+  birthdate: 1932-01-01 
+EEllis:
+  user_id: 1043
+  first_name: Emory
+  last_name: Ellis
+  gender: 男
+  birthdate: 1920-01-01 
+PEmmett:
+  user_id: 1044
+  first_name: Paul
+  last_name: Emmett
+  gender: 男
+  birthdate: 1927-01-01 
+DEvans:
+  user_id: 1045
+  first_name: David
+  last_name: Evans
+  gender: 男
+  birthdate: 1952-01-01 
+GFelsenfeld:
+  user_id: 1046
+  first_name: Gary
+  last_name: Felsenfeld
+  gender: 男
+  birthdate: 1952-01-01 
+WFenzi:
+  user_id: 1047
+  first_name: Warren
+  last_name: Fenzi
+  gender: 男
+  birthdate: 1927-01-01 
+JFletcher:
+  user_id: 1048
+  first_name: James
+  last_name: Fletcher
+  gender: 男
+  birthdate: 1916-01-01 
+RFolsom:
+  user_id: 1049
+  first_name: Richard
+  last_name: Folsom
+  gender: 男
+  birthdate: 1916-01-01 
+YFung:
+  user_id: 1050
+  first_name: Yuan-Cheng
+  last_name: Fung
+  gender: 男
+  birthdate: 1944-01-01 
+EFurshpan:
+  user_id: 1051
+  first_name: Edwin
+  last_name: Furshpan
+  gender: 男
+  birthdate: 1951-01-01 
+VGilinsky:
+  user_id: 1052
+  first_name: Victor
+  last_name: Gilinsky
+  gender: 男
+  birthdate: 1932-01-01 
+PGithinji:
+  user_id: 1053
+  first_name: Philip
+  last_name: Githinji
+  gender: 男
+  birthdate: 1943-01-01 
+DGlaser:
+  user_id: 1054
+  first_name: Donald
+  last_name: Glaser
+  gender: 男
+  birthdate: 1916-01-01 
+JGunn:
+  user_id: 1055
+  first_name: James
+  last_name: Gunn
+  gender: 男
+  birthdate: 1953-01-01 
+NGupta:
+  user_id: 1056
+  first_name: Narendra
+  last_name: Gupta
+  gender: 男
+  birthdate: 1954-01-01 
+JHall:
+  user_id: 1057
+  first_name: James
+  last_name: Hall
+  gender: 男
+  birthdate: 1951-01-01 
+RHall:
+  user_id: 1058
+  first_name: Robert
+  last_name: Hall
+  gender: 男
+  birthdate: 1942-01-01 
+LHartwell:
+  user_id: 1059
+  first_name: Leland
+  last_name: Hartwell
+  gender: 男
+  birthdate: 1949-01-01 
+SHendricks:
+  user_id: 1060
+  first_name: Sterling
+  last_name: Hendricks
+  gender: 男
+  birthdate: 1918-01-01 
+SHermannsson:
+  user_id: 1061
+  first_name: Steingrimur
+  last_name: Hermannsson
+  gender: 男
+  birthdate: 1936-01-01 
+IHerskowitz:
+  user_id: 1062
+  first_name: Ira
+  last_name: Herskowitz
+  gender: 男
+  birthdate: 1944-01-01 
+LHerzenberg:
+  user_id: 1063
+  first_name: Leonard
+  last_name: Herzenberg
+  gender: 男
+  birthdate: 1955-01-01 
+DHogness:
+  user_id: 1064
+  first_name: David
+  last_name: Hogness
+  gender: 男
+  birthdate: 1932-01-01 
+GHousner:
+  user_id: 1065
+  first_name: George
+  last_name: Housner
+  gender: 男
+  birthdate: 1956-01-01 
+THudspeth:
+  user_id: 1066
+  first_name: Tom
+  last_name: Hudspeth
+  gender: 男
+  birthdate: 1943-01-01 
+VHughes:
+  user_id: 1067
+  first_name: Vernon
+  last_name: Hughes
+  gender: 男
+  birthdate: 1949-01-01 
+MHunkapiller:
+  user_id: 1068
+  first_name: Michael
+  last_name: Hunkapiller
+  gender: 男
+  birthdate: 1953-01-01 
+JIbers:
+  user_id: 1069
+  first_name: James
+  last_name: Ibers
+  gender: 男
+  birthdate: 1947-01-01 
+AIorillo:
+  user_id: 1070
+  first_name: Anthony
+  last_name: Iorillo
+  gender: 男
+  birthdate: 1940-01-01 
+AIppen:
+  user_id: 1071
+  first_name: Arthur
+  last_name: Ippen
+  gender: 男
+  birthdate: 1920-01-01 
+HIsmail:
+  user_id: 1072
+  first_name: Hassan
+  last_name: Ismail
+  gender: 男
+  birthdate: 1922-01-01 
+WJacobs:
+  user_id: 1073
+  first_name: W.
+  last_name: Jacobs
+  gender: 男
+  birthdate: 1921-01-01 
+RJahns:
+  user_id: 1074
+  first_name: Richard
+  last_name: Jahns
+  gender: 男
+  birthdate: 1920-01-01 
+LJan:
+  user_id: 1075
+  first_name: Lily
+  last_name: Jan
+  gender: 女
+  birthdate: 1956-01-01 
+YJan:
+  user_id: 1076
+  first_name: Y.
+  last_name: Jan
+  gender: 男
+  birthdate: 1956-01-01 
+HJohnston:
+  user_id: 1077
+  first_name: Harold
+  last_name: Johnston
+  gender: 男
+  birthdate: 1935-01-01 
+AKaiser:
+  user_id: 1078
+  first_name: Armin
+  last_name: Kaiser
+  gender: 男
+  birthdate: 1931-01-01 
+MKarplus:
+  user_id: 1079
+  first_name: Martin
+  last_name: Karplus
+  gender: 男
+  birthdate: 1936-01-01 
+KKellermann:
+  user_id: 1080
+  first_name: Kenneth
+  last_name: Kellermann
+  gender: 男
+  birthdate: 1954-01-01 
+JKerrebrock:
+  user_id: 1081
+  first_name: Jack
+  last_name: Kerrebrock
+  gender: 男
+  birthdate: 1947-01-01 
+SKieffer:
+  user_id: 1082
+  first_name: Susan
+  last_name: Kieffer
+  gender: 女
+  birthdate: 1932-01-01 
+RKirshner:
+  user_id: 1083
+  first_name: Robert
+  last_name: Kirshner
+  gender: 男
+  birthdate: 1954-01-01 
+AKnudson:
+  user_id: 1084
+  first_name: Alfred
+  last_name: Knudson
+  gender: 男
+  birthdate: 1929-01-01 
+DKnuth:
+  user_id: 1085
+  first_name: Donald
+  last_name: Knuth
+  gender: 男
+  birthdate: 1928-01-01 
+ALightman:
+  user_id: 1086
+  first_name: Alan
+  last_name: Lightman
+  gender: 男
+  birthdate: 1953-01-01 
+CLin:
+  user_id: 1087
+  first_name: Chia-Chiao
+  last_name: Lin
+  gender: 男
+  birthdate: 1942-01-01 
+WLipscomb:
+  user_id: 1088
+  first_name: William
+  last_name: Lipscomb
+  gender: 男
+  birthdate: 1927-01-01 
+SLoh:
+  user_id: 1089
+  first_name: Sandra
+  last_name: Loh
+  gender: 女
+  birthdate: 1951-01-01 
+SLong:
+  user_id: 1090
+  first_name: Sharon
+  last_name: Long
+  gender: 女
+  birthdate: 1948-01-01 
+JLu Valle:
+  user_id: 1091
+  first_name: James
+  last_name: Lu Valle
+  gender: 男
+  birthdate: 1937-01-01 
+PMacCready:
+  user_id: 1092
+  first_name: Paul
+  last_name: MacCready
+  gender: 男
+  birthdate: 1928-01-01 
+RMacNeal:
+  user_id: 1093
+  first_name: Richard
+  last_name: MacNeal
+  gender: 男
+  birthdate: 1948-01-01 
+MMalin:
+  user_id: 1094
+  first_name: Michael
+  last_name: Malin
+  gender: 男
+  birthdate: 1953-01-01 
+BMandelbrot:
+  user_id: 1095
+  first_name: Benoit
+  last_name: Mandelbrot
+  gender: 男
+  birthdate: 1938-01-01 
+PManning:
+  user_id: 1096
+  first_name: Paul
+  last_name: Manning
+  gender: 男
+  birthdate: 1919-01-01 
+DMason:
+  user_id: 1097
+  first_name: David
+  last_name: Mason
+  gender: 男
+  birthdate: 1916-01-01 
+MMathews:
+  user_id: 1098
+  first_name: Max
+  last_name: Mathews
+  gender: 男
+  birthdate: 1939-01-01 
+JMayer:
+  user_id: 1099
+  first_name: Joseph
+  last_name: Mayer
+  gender: 男
+  birthdate: 1921-01-01 
+JMcCarthy:
+  user_id: 1100
+  first_name: John
+  last_name: McCarthy
+  gender: 男
+  birthdate: 1943-01-01 
+HMcConnell:
+  user_id: 1101
+  first_name: Harden
+  last_name: McConnell
+  gender: 男
+  birthdate: 1932-01-01 
+JMcLean:
+  user_id: 1102
+  first_name: John
+  last_name: McLean
+  gender: 男
+  birthdate: 1920-01-01 
+WMcLean:
+  user_id: 1103
+  first_name: William
+  last_name: McLean
+  gender: 男
+  birthdate: 1919-01-01 
+EMcMillan:
+  user_id: 1104
+  first_name: Edwin
+  last_name: McMillan
+  gender: 男
+  birthdate: 1916-01-01 
+JMcMillan:
+  user_id: 1105
+  first_name: John
+  last_name: McMillan
+  gender: 男
+  birthdate: 1930-01-01 
+DMcRuer:
+  user_id: 1106
+  first_name: Duane
+  last_name: McRuer
+  gender: 男
+  birthdate: 1933-01-01 
+CMead:
+  user_id: 1107
+  first_name: Carver
+  last_name: Mead
+  gender: 男
+  birthdate: 1956-01-01 
+HMenard:
+  user_id: 1108
+  first_name: H.
+  last_name: Menard
+  gender: 男
+  birthdate: 1928-01-01 
+DMerrifield:
+  user_id: 1109
+  first_name: Donald
+  last_name: Merrifield
+  gender: 男
+  birthdate: 1921-01-01 
+RMerton:
+  user_id: 1110
+  first_name: Robert
+  last_name: Merton
+  gender: 男
+  birthdate: 1949-01-01 
+MMeselson:
+  user_id: 1111
+  first_name: Matthew
+  last_name: Meselson
+  gender: 男
+  birthdate: 1925-01-01 
+RMettler:
+  user_id: 1112
+  first_name: Ruben
+  last_name: Mettler
+  gender: 男
+  birthdate: 1916-01-01 
+HMickley:
+  user_id: 1113
+  first_name: Harold
+  last_name: Mickley
+  gender: 男
+  birthdate: 1923-01-01 
+JMiles:
+  user_id: 1114
+  first_name: John
+  last_name: Miles
+  gender: 男
+  birthdate: 1947-01-01 
+KMislow:
+  user_id: 1115
+  first_name: Kurt
+  last_name: Mislow
+  gender: 男
+  birthdate: 1940-01-01 
+GMoore:
+  user_id: 1116
+  first_name: Gordon
+  last_name: Moore
+  gender: 男
+  birthdate: 1925-01-01 
+WMoore:
+  user_id: 1117
+  first_name: William
+  last_name: Moore
+  gender: 男
+  birthdate: 1943-01-01 
+WMunk:
+  user_id: 1118
+  first_name: Walter
+  last_name: Munk
+  gender: 男
+  birthdate: 1916-01-01 
+MMuskat:
+  user_id: 1119
+  first_name: Morris
+  last_name: Muskat
+  gender: 男
+  birthdate: 1937-01-01 
+RNarasimha:
+  user_id: 1120
+  first_name: Roddam
+  last_name: Narasimha
+  gender: 男
+  birthdate: 1936-01-01 
+JNelson:
+  user_id: 1121
+  first_name: Jerry
+  last_name: Nelson
+  gender: 男
+  birthdate: 1945-01-01 
+NNigam:
+  user_id: 1122
+  first_name: Navin
+  last_name: Nigam
+  gender: 男
+  birthdate: 1941-01-01 
+RNoland:
+  user_id: 1123
+  first_name: Robert
+  last_name: Noland
+  gender: 男
+  birthdate: 1939-01-01 
+BOliver:
+  user_id: 1124
+  first_name: Bernard
+  last_name: Oliver
+  gender: 男
+  birthdate: 1922-01-01 
+BOlivera:
+  user_id: 1125
+  first_name: Baldomero
+  last_name: Olivera
+  gender: 男
+  birthdate: 1952-01-01 
+FOppenheimer:
+  user_id: 1126
+  first_name: Frank
+  last_name: Oppenheimer
+  gender: 男
+  birthdate: 1929-01-01 
+ROrbach:
+  user_id: 1127
+  first_name: Raymond
+  last_name: Orbach
+  gender: 男
+  birthdate: 1955-01-01 
+DOsheroff:
+  user_id: 1128
+  first_name: Douglas
+  last_name: Osheroff
+  gender: 男
+  birthdate: 1945-01-01 
+COtte:
+  user_id: 1129
+  first_name: Carel
+  last_name: Otte
+  gender: 男
+  birthdate: 1934-01-01 
+SPace:
+  user_id: 1130
+  first_name: Stanley
+  last_name: Pace
+  gender: 男
+  birthdate: 1937-01-01 
+WPanofsky:
+  user_id: 1131
+  first_name: Wolfgang
+  last_name: Panofsky
+  gender: 男
+  birthdate: 1916-01-01 
+APardee:
+  user_id: 1132
+  first_name: Arthur
+  last_name: Pardee
+  gender: 男
+  birthdate: 1949-01-01 
+EParker:
+  user_id: 1133
+  first_name: Eugene
+  last_name: Parker
+  gender: 男
+  birthdate: 1930-01-01 
+GParker:
+  user_id: 1134
+  first_name: Gerhard
+  last_name: Parker
+  gender: 男
+  birthdate: 1954-01-01 
+RParks:
+  user_id: 1135
+  first_name: Robert
+  last_name: Parks
+  gender: 男
+  birthdate: 1942-01-01 
+DPeck:
+  user_id: 1136
+  first_name: Dallas
+  last_name: Peck
+  gender: 男
+  birthdate: 1935-01-01 
+JPierce:
+  user_id: 1137
+  first_name: John
+  last_name: Pierce
+  gender: 男
+  birthdate: 1916-01-01 
+CPings:
+  user_id: 1138
+  first_name: Cornelius
+  last_name: Pings
+  gender: 男
+  birthdate: 1939-01-01 
+KPitzer:
+  user_id: 1139
+  first_name: Kenneth
+  last_name: Pitzer
+  gender: 男
+  birthdate: 1916-01-01 
+APrabhakar:
+  user_id: 1140
+  first_name: Arati
+  last_name: Prabhakar
+  gender: 女
+  birthdate: 1945-01-01 
+APuckett:
+  user_id: 1141
+  first_name: Allen
+  last_name: Puckett
+  gender: 男
+  birthdate: 1920-01-01 
+LRader:
+  user_id: 1142
+  first_name: Louis
+  last_name: Rader
+  gender: 男
+  birthdate: 1916-01-01 
+LRainwater:
+  user_id: 1143
+  first_name: L.
+  last_name: Rainwater
+  gender: 男
+  birthdate: 1926-01-01 
+ERechtin:
+  user_id: 1144
+  first_name: Eberhardt
+  last_name: Rechtin
+  gender: 男
+  birthdate: 1934-01-01 
+IReed:
+  user_id: 1145
+  first_name: Irving
+  last_name: Reed
+  gender: 男
+  birthdate: 1942-01-01 
+EReinecke:
+  user_id: 1146
+  first_name: Ed
+  last_name: Reinecke
+  gender: 男
+  birthdate: 1919-01-01 
+LRoot:
+  user_id: 1147
+  first_name: L.
+  last_name: Root
+  gender: 男
+  birthdate: 1916-01-01 
+MRosbash:
+  user_id: 1148
+  first_name: Michael
+  last_name: Rosbash
+  gender: 男
+  birthdate: 1951-01-01 
+BRosen:
+  user_id: 1149
+  first_name: Benjamin
+  last_name: Rosen
+  gender: 男
+  birthdate: 1957-01-01 
+HRosen:
+  user_id: 1150
+  first_name: Harold
+  last_name: Rosen
+  gender: 男
+  birthdate: 1926-01-01 
+SRoss:
+  user_id: 1151
+  first_name: Stephen
+  last_name: Ross
+  gender: 男
+  birthdate: 1943-01-01 
+PSaltman:
+  user_id: 1152
+  first_name: Paul
+  last_name: Saltman
+  gender: 男
+  birthdate: 1923-01-01 
+ASandage:
+  user_id: 1153
+  first_name: Allan
+  last_name: Sandage
+  gender: 男
+  birthdate: 1947-01-01 
+GSato:
+  user_id: 1154
+  first_name: Gordon
+  last_name: Sato
+  gender: 男
+  birthdate: 1955-01-01 
+HSchmitt:
+  user_id: 1155
+  first_name: Harrison
+  last_name: Schmitt
+  gender: 男
+  birthdate: 1923-01-01 
+PSchultz:
+  user_id: 1156
+  first_name: Peter
+  last_name: Schultz
+  gender: 男
+  birthdate: 1951-01-01 
+GSchurman:
+  user_id: 1157
+  first_name: Glenn
+  last_name: Schurman
+  gender: 男
+  birthdate: 1944-01-01 
+HSchwartz:
+  user_id: 1158
+  first_name: Henry
+  last_name: Schwartz
+  gender: 男
+  birthdate: 1954-01-01 
+WSears:
+  user_id: 1159
+  first_name: William
+  last_name: Sears
+  gender: 男
+  birthdate: 1938-01-01 
+MSerrurier:
+  user_id: 1160
+  first_name: Mark
+  last_name: Serrurier
+  gender: 男
+  birthdate: 1931-01-01 
+SShen:
+  user_id: 1161
+  first_name: San-Chiun
+  last_name: Shen
+  gender: 男
+  birthdate: 1946-01-01 
+WShockley:
+  user_id: 1162
+  first_name: William
+  last_name: Shockley
+  gender: 男
+  birthdate: 1916-01-01 
+EShoemaker:
+  user_id: 1163
+  first_name: Eugene
+  last_name: Shoemaker
+  gender: 男
+  birthdate: 1936-01-01 
+PShor:
+  user_id: 1164
+  first_name: Peter
+  last_name: Shor
+  gender: 男
+  birthdate: 1957-01-01 
+DShreffler:
+  user_id: 1165
+  first_name: Donald
+  last_name: Shreffler
+  gender: 男
+  birthdate: 1939-01-01 
+OSilva:
+  user_id: 1166
+  first_name: Ozires
+  last_name: Silva
+  gender: 男
+  birthdate: 1942-01-01 
+GSmith:
+  user_id: 1167
+  first_name: George
+  last_name: Smith
+  gender: 男
+  birthdate: 1941-01-01 
+VSmith:
+  user_id: 1168
+  first_name: Vernon
+  last_name: Smith
+  gender: 男
+  birthdate: 1946-01-01 
+GSolomon:
+  user_id: 1169
+  first_name: George
+  last_name: Solomon
+  gender: 男
+  birthdate: 1933-01-01 
+SSolomon:
+  user_id: 1170
+  first_name: Sean
+  last_name: Solomon
+  gender: 男
+  birthdate: 1956-01-01 
+HStever:
+  user_id: 1171
+  first_name: H.
+  last_name: Stever
+  gender: 男
+  birthdate: 1916-01-01 
+DStrain:
+  user_id: 1172
+  first_name: Douglas
+  last_name: Strain
+  gender: 男
+  birthdate: 1936-01-01 
+ISutherland:
+  user_id: 1173
+  first_name: Ivan
+  last_name: Sutherland
+  gender: 男
+  birthdate: 1935-01-01 
+CTan:
+  user_id: 1174
+  first_name: Chia-Chen
+  last_name: Tan
+  gender: 男
+  birthdate: 1933-01-01 
+HTemin:
+  user_id: 1175
+  first_name: Howard
+  last_name: Temin
+  gender: 男
+  birthdate: 1926-01-01 
+ATollestrup:
+  user_id: 1176
+  first_name: Alvin
+  last_name: Tollestrup
+  gender: 男
+  birthdate: 1943-01-01 
+KTomiyasu:
+  user_id: 1177
+  first_name: Kiyo
+  last_name: Tomiyasu
+  gender: 男
+  birthdate: 1952-01-01 
+CTownes:
+  user_id: 1178
+  first_name: Charles
+  last_name: Townes
+  gender: 男
+  birthdate: 1916-01-01 
+CTrimble:
+  user_id: 1179
+  first_name: Charles
+  last_name: Trimble
+  gender: 男
+  birthdate: 1945-01-01 
+ATrivelpiece:
+  user_id: 1180
+  first_name: Alvin
+  last_name: Trivelpiece
+  gender: 男
+  birthdate: 1937-01-01 
+HTsien:
+  user_id: 1181
+  first_name: Hsue-Shen
+  last_name: Tsien
+  gender: 男
+  birthdate: 1929-01-01 
+DTurcotte:
+  user_id: 1182
+  first_name: Donald
+  last_name: Turcotte
+  gender: 男
+  birthdate: 1949-01-01 
+MTurner:
+  user_id: 1183
+  first_name: Michael
+  last_name: Turner
+  gender: 男
+  birthdate: 1956-01-01 
+NTurro:
+  user_id: 1184
+  first_name: Nicholas
+  last_name: Turro
+  gender: 男
+  birthdate: 1946-01-01 
+VVeysey:
+  user_id: 1185
+  first_name: Victor
+  last_name: Veysey
+  gender: 男
+  birthdate: 1926-01-01 
+JWaugh:
+  user_id: 1186
+  first_name: John
+  last_name: Waugh
+  gender: 男
+  birthdate: 1937-01-01 
+WWebster:
+  user_id: 1187
+  first_name: Wilton
+  last_name: Webster
+  gender: 男
+  birthdate: 1955-01-01 
+GWhitesides:
+  user_id: 1188
+  first_name: George
+  last_name: Whitesides
+  gender: 男
+  birthdate: 1930-01-01 
+MWilliams:
+  user_id: 1189
+  first_name: Max
+  last_name: Williams
+  gender: 男
+  birthdate: 1945-01-01 
+EWilson:
+  user_id: 1190
+  first_name: E.
+  last_name: Wilson
+  gender: 男
+  birthdate: 1916-01-01 
+KWilson:
+  user_id: 1191
+  first_name: Kenneth
+  last_name: Wilson
+  gender: 男
+  birthdate: 1931-01-01 
+RWilson:
+  user_id: 1192
+  first_name: Robert
+  last_name: Wilson
+  gender: 男
+  birthdate: 1929-01-01 
+TWilson:
+  user_id: 1193
+  first_name: T.
+  last_name: Wilson
+  gender: 男
+  birthdate: 1918-01-01 
+SWinstein:
+  user_id: 1194
+  first_name: Saul
+  last_name: Winstein
+  gender: 男
+  birthdate: 1916-01-01 
+DWooldridge:
+  user_id: 1195
+  first_name: Dean
+  last_name: Wooldridge
+  gender: 男
+  birthdate: 1933-01-01 
+MWrighton:
+  user_id: 1196
+  first_name: Mark
+  last_name: Wrighton
+  gender: 男
+  birthdate: 1942-01-01 
+HYin:
+  user_id: 1197
+  first_name: Hung-Chang
+  last_name: Yin
+  gender: 男
+  birthdate: 1938-01-01 
+WYoung:
+  user_id: 1198
+  first_name: William
+  last_name: Young
+  gender: 男
+  birthdate: 1918-01-01 
+HYuen:
+  user_id: 1199
+  first_name: Henry
+  last_name: Yuen
+  gender: 男
+  birthdate: 1949-01-01 
+AZarem:
+  user_id: 1200
+  first_name: Abe
+  last_name: Zarem
+  gender: 男
+  birthdate: 1919-01-01 
+RZwanzig:
+  user_id: 1201
+  first_name: Robert
+  last_name: Zwanzig
+  gender: 男
+  birthdate: 1938-01-01 
+GZweig:
+  user_id: 1202
+  first_name: George
+  last_name: Zweig
+  gender: 男
+  birthdate: 1934-01-01 
+

@@ -1,0 +1,10 @@
+<h1>Frequently Asked Questions</h1>
+<p>请输入你的一些基本爱好等信息</p>
+<% form_for :faq do |faq| %>
+<fieldset>
+	<legend>更新你的信息</legend>
+	<%= render :partial=>"user/errors_show",:locals=>{:user=>@faq}%>
+	<%= render :partial=>"answer_text_area",:collection=>Faq::QUESTIONS,:locals=>{ :form=>faq } %>
+	<%= submit_tag "更新所有",:class=>"submit" %>
+</fieldset>
+<%end%>

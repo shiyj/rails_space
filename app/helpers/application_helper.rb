@@ -1,4 +1,5 @@
 module ApplicationHelper
+	require 'string'
   #导航栏简化写法
   def nav_link(text,controller,action="index")
     link_to_unless_current text,:controller=>controller,:action=>action

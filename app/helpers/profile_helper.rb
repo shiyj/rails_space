@@ -2,4 +2,5 @@ module ProfileHelper
 	def profile_for(user)
 		profile_url(:screen_name=>user.screen_name)
 	end
+	
 end

@@ -3,7 +3,9 @@
   <fieldset>
     <legend>Enter Your Details</legend>
     <!--验证错误信息-->
-   <%= render :partial=>"errors_show",:locals=>{:user=>@user}%>
+   <!--<%= render :partial=>"errors_show",:locals=>{:user=>@user}%>-->
+   <!--使用dynamic_form,不过需要更改成中文支持之类的,有时间修改下这个插件.-->
+   	<%= error_messages_for 'user' %>
     <div class="form_row">
       <label for="screen_name">Screen name:</label>
       <%= form.text_field :screen_name,

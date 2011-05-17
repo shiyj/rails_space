@@ -1,13 +1,15 @@
 require 'digest/sha1'
 class UserController < ApplicationController
   include ApplicationHelper
-  helper :profile
+  helper :profile,:avatar
   before_filter :protect,:only=>:index
   def index
     @title="RailsSpace User Hub"
     @user=User.find(session[:user_id])
-    @user ||= Spec.new
+    @user.spec ||= Spec.new
     @spec=@user.spec
+    @user.faq ||= Faq.new
+    @faq=@user.faq
   end
 
   def register
@@ -42,6 +44,7 @@ class UserController < ApplicationController
     		  user.forget!(cookies)
     		end
     		flash[:notice]="User #{user.screen_name} logged in!"
+    		UserMailer.welcome(user).deliver
     		redirect_to_forwarding_url
     	else
     		@user.clear_password!
@@ -74,19 +77,6 @@ class UserController < ApplicationController
   end
   
   private
-  #保护页面函数
-  def protect
-    unless logged_in?
-      #友好的转向页面
-      session[:protected_page]=request.fullpath
-      flash[:notice]="Please log in first"
-      redirect_to :action=>"login"
-      #return false是打断往下的链,即before_filter往下执行的内容
-      #这就是before_filter的功效.
-      return false
-    end
-  end
-
   #友好转向,重定向到先前的页面
   def redirect_to_forwarding_url
     #友好的转向页面

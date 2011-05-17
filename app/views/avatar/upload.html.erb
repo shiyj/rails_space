@@ -1,0 +1,20 @@
+<h1>上传头像</h1>
+<%= form_tag("upload",:multipart=>true) do %>
+<fieldset>
+	<legend><%= @title %></legend>
+	<%= error_messages_for 'avatar' %>
+	<% if @user.avatar.exists? %>
+	<div class="form_row">
+		<lable for="current_avatar">头像</lable>
+		<%= thumbnail_tag @user %>
+		<%= link_to "删除",{:action=>"delete"},:confirm=>"确定要删除吗?" %>
+	</div>
+	<% end %>
+	<div class="form_row">
+		<lable for="new_avatar">新头像</lable>
+		<!--关键是这个file,表示是选择文件-->
+		<%= file_field "avatar", "image" %>
+	</div>
+	<%= submit_tag "上传头像",:class=>"submit" %>
+</fieldset>
+<% end %>

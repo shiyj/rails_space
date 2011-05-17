@@ -1,4 +1,17 @@
 RailsSpace::Application.routes.draw do
+
+  get "avatar/upload"
+
+  get "avatar/delete"
+
+  get "community/index"
+
+  get "community/browse"
+
+  get "community/search"
+
+  get "faq/edit"
+
   get "spec/edit"
 
   get "profile/index"
@@ -23,11 +36,12 @@ RailsSpace::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-
+	
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-
+  match 'profile/:screen_name'=>"profile#show", :as=>:profile
+  
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
@@ -72,6 +86,6 @@ RailsSpace::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  match 'profile/:screen_name'=>"profile#show"
+  
   match ':controller(/:action(/:id(.:format)))'
 end

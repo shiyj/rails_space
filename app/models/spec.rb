@@ -22,5 +22,14 @@ class Spec < ActiveRecord::Base
 	def full_name
 		[first_name,last_name].join(" ")
 	end
-												
+	
+	def age
+		return if birthdate.nil?
+		today=Date.today
+		if today.month > birthdate.month and today.day>=birthdate.day
+			today.year - birthdate.year
+		else
+			today.year - birthdate.year - 1
+		end
+	end								
 end
