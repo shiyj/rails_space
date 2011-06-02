@@ -13,7 +13,6 @@ class Avatar
 	def initialize (user,image=nil)
 		@user=user
 		@image=image
-    breakpoint
 		Dir.mkdir(DIRECTORY) unless File.directory?(DIRECTORY)
 	end
 	def exists?
