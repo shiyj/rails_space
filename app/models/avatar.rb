@@ -48,8 +48,8 @@ class Avatar
 		full_size=File.join(DIRECTORY,filename)
 		thumbnail=File.join(DIRECTORY,thumbnail_name)
 		File.open(source,"wb"){|f| f.write(@image.read) }
-		img=system("convert #{source} -resize 240x330 #{full_size}")
-		thumb=system("convert #{source} -resize 50x64 #{thumbnail}")
+		img=system("convert /#{source} -resize 240x330 #{full_size}")
+		thumb=system("convert /#{source} -resize 50x64 #{thumbnail}")
 		File.delete(source) if File.exists?(source)
 		unless img and thumb
 			#errors 的add和add_to_base是不同的.
@@ -57,7 +57,7 @@ class Avatar
 			#在新的rails中改为add(:base,message)
 			#为了区分,仍以老的为例.add是对某个对象而言,比如add(:name,'not nil'),结果会出现name not nil.
 			#而如果是add_to_base则只出现message中的信息,不加前缀name.
-			errors.add(:base,"上传失败!请重新选择头像文件.")
+			errors.add(:base,"上传失败!\n这可能是服务器或着网络链接的问题，请稍后重试.")
 			return false
 		end
 		return true
