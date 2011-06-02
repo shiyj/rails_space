@@ -14,7 +14,7 @@
 		<span><%=link_to "(edit)",:controller=>"spec",:action=>"edit"%></span>
 		</h2>
 		<ul>
-			<%= render:partial=>"spec/field_row",:collection=>Spec::ALL_FIELDS %>
+			<%= render :partial=>"spec/field_row",:collection=>Spec::ALL_FIELDS %>
 		</ul>
 		<h2>
 			<span>Faq</span>
@@ -28,7 +28,7 @@
 			<span><%=link_to "(edit)",:controller=>"avatar",:action=>"upload" %></span>
 		</h2>
 		<ul>
-			<%=render :partial=>'avatar/sidebar_box'%>
+      <%=render :partial=>'avatar/sidebar_box'%>
 		</ul>
 	</div>
 <div id="userrightinfo">

@@ -1,3 +1,4 @@
+# encoding: utf-8
 class AvatarController < ApplicationController
   def upload
   	@title="上传头像"

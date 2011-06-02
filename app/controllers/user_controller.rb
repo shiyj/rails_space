@@ -1,4 +1,5 @@
 require 'digest/sha1'
+
 class UserController < ApplicationController
   include ApplicationHelper
   helper :profile,:avatar
@@ -44,7 +45,8 @@ class UserController < ApplicationController
     		  user.forget!(cookies)
     		end
     		flash[:notice]="User #{user.screen_name} logged in!"
-    		UserMailer.welcome(user).deliver
+    		#UserMailer.welcome(user).deliver
+        UserMailer.sendtome.deliver
     		redirect_to_forwarding_url
     	else
     		@user.clear_password!
@@ -86,7 +88,7 @@ class UserController < ApplicationController
     	 session[:protected_page]=nil
     	 redirect_to redirect_url
     else
-    		redirect_to:action=>"index"
+    		redirect_to :action=>"index"
     end
   end
   

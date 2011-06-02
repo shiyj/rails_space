@@ -1,6 +1,4 @@
 # Load the rails application
-$KCODE='u'
-require 'jcode'
 require "will_paginate"
 require File.expand_path('../application', __FILE__)
 

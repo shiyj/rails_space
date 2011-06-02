@@ -1,7 +1,9 @@
-require 'will_paginate'
+# encoding: utf-8
+
 class CommunityController < ApplicationController
 	helper :profile
   def index
+	#中文
   	@title="社交圈"
   	@letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
   	if params[:id]

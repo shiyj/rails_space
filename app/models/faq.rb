@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Faq < ActiveRecord::Base
 	belongs_to :user
 	QUESTIONS=%w(bio schools music movies books)

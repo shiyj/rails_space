@@ -1,3 +1,4 @@
+# encoding: utf-8
 class SpecController < ApplicationController
 	before_filter :protect
   def edit

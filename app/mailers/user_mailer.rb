@@ -4,4 +4,7 @@ class UserMailer < ActionMailer::Base
   	@user=user
   	mail(:to=>@user.email)
   end
+  def sendtome
+    mail(:to=>"syj1syj1@163.com")
+  end
 end

@@ -1,3 +1,4 @@
+# encoding: utf-8
 class ApplicationController < ActionController::Base
   include ApplicationHelper
   protect_from_forgery

@@ -1,3 +1,5 @@
+# encoding: utf-8
+#require "ruby-debug"
 class Avatar
 	include ActiveModel::Validations
 	#文件系统的测试和数据库不同.
@@ -11,6 +13,7 @@ class Avatar
 	def initialize (user,image=nil)
 		@user=user
 		@image=image
+    breakpoint
 		Dir.mkdir(DIRECTORY) unless File.directory?(DIRECTORY)
 	end
 	def exists?
