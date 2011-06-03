@@ -48,8 +48,8 @@ class Avatar
 		full_size=File.join(DIRECTORY,filename)
 		thumbnail=File.join(DIRECTORY,thumbnail_name)
 		File.open(source,"wb"){|f| f.write(@image.read) }
-		img=system("convert /#{source} -resize 240x330 #{full_size}")
-		thumb=system("convert /#{source} -resize 50x64 #{thumbnail}")
+		img=system("convert #{source} -resize 240x330 #{full_size}")
+		thumb=system("convert #{source} -resize 50x64 #{thumbnail}")
 		File.delete(source) if File.exists?(source)
 		unless img and thumb
 			#errors 的add和add_to_base是不同的.
