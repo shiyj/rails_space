@@ -29,7 +29,13 @@
 		</h2>
 		<ul>
       <%=render :partial=>'avatar/sidebar_box'%>
-		</ul>
+    </ul>
+    <h2>
+      <span>Blog
+        <!--posts_path是通过路由设置的方法-->
+        <%= link_to "管理",blog_post_path(@blog.id) %>
+      </span>
+    </h2>
 	</div>
 <div id="userrightinfo">
 	<h2>

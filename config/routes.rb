@@ -1,5 +1,11 @@
 RailsSpace::Application.routes.draw do
 
+
+  # 在路由上将博客和帖子连接起来。
+  resources :blogs do 
+    resources :posts
+  end
+
   get "avatar/upload"
 
   get "avatar/delete"

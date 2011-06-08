@@ -1,5 +1,4 @@
 # encoding: utf-8
-#require "ruby-debug"
 class Avatar
 	include ActiveModel::Validations
 	#文件系统的测试和数据库不同.
@@ -13,7 +12,7 @@ class Avatar
 	def initialize (user,image=nil)
 		@user=user
 		@image=image
-		Dir.mkdir(DIRECTORY) unless File.directory?(DIRECTORY)
+		#Dir.mkdir(DIRECTORY) unless File.directory?(DIRECTORY)
 	end
 	def exists?
 		File.exists?(File.join(DIRECTORY,filename))
@@ -47,10 +46,11 @@ class Avatar
 		source=File.join("tmp","#{@user.screen_name}_full_size")
 		full_size=File.join(DIRECTORY,filename)
 		thumbnail=File.join(DIRECTORY,thumbnail_name)
-		File.open(source,"wb"){|f| f.write(@image.read) }
+		#将上传的文件写入到source中，然后再在服务器上转换。
+    File.open(source,"wb"){|f| f.write(@image.read) }
 		img=system("convert #{source} -resize 240x330 #{full_size}")
 		thumb=system("convert #{source} -resize 50x64 #{thumbnail}")
-		File.delete(source) if File.exists?(source)
+		#File.delete(source) if File.exists?(source)
 		unless img and thumb
 			#errors 的add和add_to_base是不同的.
 			#errors.add_to_base("上传失败!请重新选择头像文件.")

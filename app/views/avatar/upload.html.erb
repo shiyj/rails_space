@@ -12,7 +12,8 @@
 	<% end %>
 	<div class="form_row">
 		<lable for="new_avatar">新头像</lable>
-		<!--关键是这个file,表示是选择文件-->
+    <!--关键是这个file,表示是选择文件-->
+    <!--file_field(object_name, method, options = {})-->
 		<%= file_field "avatar", "image" %>
 	</div>
 	<%= submit_tag "上传头像",:class=>"submit" %>

@@ -11,6 +11,8 @@ class UserController < ApplicationController
     @spec=@user.spec
     @user.faq ||= Faq.new
     @faq=@user.faq
+    @user.blog ||=Blog.new
+    @blog=@user.blog
   end
 
   def register
