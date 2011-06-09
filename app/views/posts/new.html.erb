@@ -1,5 +1,3 @@
 <h1>New post</h1>
-
-<%= render 'form', :locals=>{ :your_url=> new_blog_post_path} %>
-
-<%= link_to 'Back', blog_post_path %>
+<%= render 'form', :locals=>{:rest_url=>@rest_url} %>
+<%= link_to 'Back', blog_posts_path %>

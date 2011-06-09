@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   # GET /posts/new.xml
   def new
     @post = Post.new
-
+    @rest_url=new_blog_post_path
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @post }
@@ -42,6 +42,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    @rest_url=blog_post_path
   end
 
   # POST /posts
@@ -50,7 +51,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
 
     respond_to do |format|
-      if @blog.posts << @post
+      if @post.save
         format.html { redirect_to(@post, :notice => 'Post was successfully created.') }
         format.xml  { render :xml => @post, :status => :created, :location => @post}
       else
