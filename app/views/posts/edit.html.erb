@@ -1,6 +1,6 @@
 <h1>Editing post</h1>
 
-<%= render 'form' %>
+<%= render 'form', :locals=>{ :your_url=> blog_post_path(@post.blog,@post)} %>
 
 <%= link_to 'Show', blog_post_path(@post.blog,@post) %> |
 <%= link_to 'Back', blog_posts_path %>
