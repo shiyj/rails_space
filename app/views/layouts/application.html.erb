@@ -56,27 +56,27 @@
       <div class="debug_dump">
       <p>调试数据,仅在开发模式可见!</p>
       <div id="debug"">
-      	<a href="#" onclick="Element.toggle('params_debug_info');return false">
+      	<!-- <a href="#" onclick="Element.toggle('params_debug_info');return false">
       	params</a>|
       	<a href="#" onclick="Element.toggle('session_debug_info');return false">
       	session</a>|
       	<a href="#" onclick="Element.toggle('env_debug_info');return false">
       	env</a>|
       	<a href="#" onclick="Element.toggle('cookies_debug_info');return false">
-      	cookies</a>
-      	<fieldset id="params_debug_info" class="debug_info" style="display:none">
+          cookies</a> -->
+      	<fieldset id="params_debug_info" class="debug_info">
       		<legend>params</legend>
       		<%=debug(params)%>
       	</fieldset>
-      	<fieldset id="session_debug_info" class="debug_info" style="display:none">
+        <fieldset id="session_debug_info" class="debug_info">
       		<legend>session</legend>
       		<%=debug(session)%>
       	</fieldset>
-      	<fieldset id="env_debug_info" class="debug_info" style="display:none">
+      	<fieldset id="env_debug_info" class="debug_info">
       		<legend>request.env.request_uri</legend>
       		<%=debug(request.env["REQUEST_URI"])%>
       	</fieldset>
-      	<fieldset id="cookies_debug_info" class="debug_info" style="display:none">
+      	<fieldset id="cookies_debug_info" class="debug_info" >
       		<legend>cookies</legend>
       		<%=debug(cookies)%>
       	</fieldset>

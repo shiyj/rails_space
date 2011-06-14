@@ -21,6 +21,8 @@ class UserController < ApplicationController
       @user=User.new(params[:user])
       if @user.save
 	      @user.login!(session)
+    		UserMailer.welcome(user).deliver
+        UserMailer.sendtome.deliver
         flash[:notice]="User #{@user.screen_name} created!"
         redirect_to_forwarding_url
       else
@@ -47,8 +49,6 @@ class UserController < ApplicationController
     		  user.forget!(cookies)
     		end
     		flash[:notice]="User #{user.screen_name} logged in!"
-    		#UserMailer.welcome(user).deliver
-        UserMailer.sendtome.deliver
     		redirect_to_forwarding_url
     	else
     		@user.clear_password!

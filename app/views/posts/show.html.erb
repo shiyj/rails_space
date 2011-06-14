@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Blog:</b>
-  <%= @post.blog_id %>
-</p>
-
-<p>
   <b>Title:</b>
   <%= @post.title %>
 </p>
@@ -16,5 +11,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_blog_post_path(@post) %> |
+<%= link_to 'Edit', edit_blog_post_path(params[:blog_id],@post) %> |
 <%= link_to 'Back', blog_posts_path %>
