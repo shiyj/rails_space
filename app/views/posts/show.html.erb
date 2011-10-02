@@ -1,15 +1,11 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <b>Title:</b>
   <%= @post.title %>
 </p>
-
 <p>
   <b>Body:</b>
   <%= @post.body %>
 </p>
-
-
 <%= link_to 'Edit', edit_blog_post_path(params[:blog_id],@post) %> |
 <%= link_to 'Back', blog_posts_path %>

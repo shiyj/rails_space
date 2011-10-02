@@ -1,0 +1,30 @@
+<div class ="post">
+  <% @posts.each do |post| %>
+    <hr width="100%"</hr>
+    <div class="post_title">
+      <h4><%= post.title %></h4>
+    </div>
+    <hr width="100%"></hr>
+    <div class="post_body">
+      <%= sanitize post.body, :tags => %w(table tr td), :attributes => %w(id class style) %>
+    </div>
+    <div class="post_creation_date">
+      Posted <%= time_ago_in_words post.created_at %> ago
+      <% if post.updated_at != post.created_at %>
+        <br />Modified <%= time_ago_in_words post.updated_at %> ago
+      <% end %>
+    </div>
+    <hr width="100%"></hr>
+    <hr width="100%"></hr>
+  <div id="comment_for_post"_<%= post.id %>">
+    <%= render :partial=>"comments/comment",:collection=>post.comments %>
+  </div>
+  <% if logged_in? %>
+    <div id="add_comment_link_for_post_<%= post.id %>">
+      <%= link_to "评论",:remote=>true ,:url=>new_blog_post_comment_path(1),method=>:get %>
+    </div>
+    <div id="new_comment_form_for_post_<%= post.id %>" >
+    </div>
+    <% end %>
+  <% end %>
+</div>

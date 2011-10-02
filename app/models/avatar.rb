@@ -50,7 +50,7 @@ class Avatar
     File.open(source,"wb"){|f| f.write(@image.read) }
 		img=system("convert #{source} -resize 240x330 #{full_size}")
 		thumb=system("convert #{source} -resize 50x64 #{thumbnail}")
-		#File.delete(source) if File.exists?(source)
+		File.delete(source) if File.exists?(source)
 		unless img and thumb
 			#errors 的add和add_to_base是不同的.
 			#errors.add_to_base("上传失败!请重新选择头像文件.")

@@ -51,7 +51,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     @post.blog_id=params[:blog_id]
     respond_to do |format|
-      if @post.save
+      if @post.duplicate? or @post.save
         #如果保存成功则将页面重新定向到所有的发表posts中。
         format.html { redirect_to(blog_posts_path, :notice => 'Post was successfully created.') }
         format.xml  { render :xml => @post, :status => :created, :location => @post}

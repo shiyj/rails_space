@@ -14,7 +14,7 @@
 		<ul>
 			<%=render :partial=>'avatar/sidebar_box'%>
 		</ul>
-	</div>
+  </div>
 	<div id="userrightinfo">
 		<h2>
 		<%=h @spec.full_name.or_else("Your Name")%>
@@ -22,9 +22,11 @@
 		<hr noshade />
 		Profile URL:<%=link_to profile_for(@user), profile_for(@user) %>
 		<hr noshade />
-		My Bio:
+    <h3>My Bio:</h3>
 		<div id= "bio" class="faq_answer">
 			<%= sanitize @faq.bio %>
-		</div>
+    </div>
+    <h3>My Blog:</h3>
+    <%=render :partial=>"blog" %>
 </div>
 </div>

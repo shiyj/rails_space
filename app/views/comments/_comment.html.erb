@@ -1,0 +1,10 @@
+<div id="comment_<%= comment.id %> class="comment">
+  <hr noshade />
+  <span class="thumbnail">
+    <%= link_to thumbnail_tag(comment.user),profile_for(comment.user) %>
+  </span>
+  <%= link_to comment.user.name,profile_for(comment.user) %>
+  commented
+  <%= time_ago_in_words comment.created_at %> ago;
+  <p><%= sanitize comment.body %></p>
+</div>

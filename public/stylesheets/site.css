@@ -185,3 +185,24 @@ table.users tr.even {
 table.users tr.odd {
   background: #eee;
 }
+
+
+.post{
+  display: block;
+  margin-bottom; 1.5em;
+}
+.post_title{
+  font-weight:blod;
+}
+.post_body{
+  padding: 1em
+}
+
+.comment{
+  min-height: 90px;
+}
+.thumbnail {
+  display: block;
+  float: left;
+  margin-right: 1em;
+}

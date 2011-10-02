@@ -27,4 +27,11 @@ class ApplicationController < ActionController::Base
       return false
     end
   end
+  #作为全局方法来让不同的controller之间统一到user上。DRY
+  def make_profile_vars
+   @spec=@user.spec || Spec.new
+   @faq=@user.faq || Faq.new
+   @blog= @user.blog || Blog.new
+   @posts= @blog.posts.paginate(:page=>params[:page],:per_page=>10) 
+  end
 end

@@ -1,7 +1,11 @@
 <div class="sidebar_box_contents">
 	<% if @user.avatar.exists? %>
 		<%= avatar_tag(@user) %>
-	<%else%>
+  <% else %>
+    <% if @is_profile %>
+      暂无头像
+      <% else %>
 		没有头像?<%= link_to "上传一个!",:controller=>"avatar",:action=>"upload" %>
   <% end %>
+<% end %>
 </div>

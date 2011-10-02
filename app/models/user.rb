@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 	has_one :spec	
 	has_one :faq
   has_one :blog
+  has_many :comments,:order=>"created_at DESC",:dependent=>:destroy
   attr_accessor :remember_me
   attr_accessor :current_password
   SCREEN_NAME_MIN_LENGTH=4

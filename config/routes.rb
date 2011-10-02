@@ -1,9 +1,10 @@
 RailsSpace::Application.routes.draw do
 
-
   # 在路由上将博客和帖子连接起来。
   resources :blogs do 
-    resources :posts
+    resources :posts do
+      resources :comments
+    end
   end
 
   get "avatar/upload"
