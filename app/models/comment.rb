@@ -3,7 +3,7 @@ class Comment < ActiveRecord::Base
   belongs_to :post
 
   validates_presence_of :body, :post, :user
-  validates_length_of :body, :maximum => DB_TEXT_MAX_LENGTH
+  validates_length_of :body, :maximum => 40000
   #防止出现重复评论
   validates_uniqueness_of :body, :scope => [:post_id, :user_id]
   #判断是否是重复评论
